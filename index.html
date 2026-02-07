@@ -13,10 +13,14 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#3B82F6',
-                        secondary: '#10B981',
-                        dark: '#1F2937',
-                        light: '#F9FAFB'
+                        primary: '#00C853',
+                        secondary: '#84CC16',
+                        accent: '#EC4899',
+                        dark: '#0A0F1A',
+                        gunmetal: '#1A1F2E',
+                        steel: '#2D3748',
+                        emerald: '#00674F',
+                        light: '#F5F5F5'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -36,27 +40,49 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <style>
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
         .gradient-text {
-            background: linear-gradient(90deg, #3B82F6 0%, #10B981 100%);
+            background: linear-gradient(90deg, #00C853 0%, #84CC16 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
         .hero-bg {
-            background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.1) 0%, rgba(16, 185, 129, 0.1) 90%);
+            background: radial-gradient(circle at 10% 20%, rgba(0, 200, 83, 0.1) 0%, rgba(132, 204, 22, 0.05) 90%);
         }
        
         .dark .hero-bg {
-            background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.05) 0%, rgba(16, 185, 129, 0.05) 90%);
+            background: radial-gradient(circle at 10% 20%, rgba(0, 200, 83, 0.15) 0%, rgba(132, 204, 22, 0.1) 90%);
         }
         .dark {
             --tw-bg-opacity: 1;
-            background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+            background-color: rgba(10, 15, 26, var(--tw-bg-opacity));
             --tw-text-opacity: 1;
-            color: rgba(243, 244, 246, var(--tw-text-opacity));
+            color: rgba(255, 255, 255, var(--tw-text-opacity));
         }
         .dark .bg-white {
-            background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+            background-color: rgba(26, 31, 46, var(--tw-bg-opacity));
+        }
+        .dark .bg-gunmetal {
+            background-color: rgba(26, 31, 46, var(--tw-bg-opacity));
+        }
+        .dark .bg-dark {
+            background-color: rgba(10, 15, 26, var(--tw-bg-opacity));
+        }
+        body:not(.dark) .bg-dark {
+            background-color: #F5F5F5;
+        }
+        body:not(.dark) .bg-gunmetal {
+            background-color: #FFFFFF;
+        }
+        body:not(.dark) .text-white {
+            color: #1F2937 !important;
+        }
+        body:not(.dark) .dark\:text-white {
+            color: #1F2937;
         }
         .code_frame::-webkit-scrollbar {
             display: none;
@@ -67,9 +93,9 @@
         }
     </style>
 </head>
-<body class="font-sans bg-light text-dark dark:bg-dark dark:text-light transition-colors duration-300">
+<body class="font-sans bg-white text-dark dark:bg-dark dark:text-light transition-colors duration-300">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 dark hero-bg">
+    <nav class="fixed w-full bg-white/95 dark:bg-gunmetal/95 backdrop-blur-sm shadow-sm z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center">
@@ -78,55 +104,56 @@
                 <div class="flex-1"></div>
                 <div class="flex items-center ml-4">
                     <button id="theme-toggle" class="p-2 rounded-full focus:outline-none">
-                        <i data-feather="moon" class="hidden dark:block text-gray-700 dark:text-gray-300"></i>
-                        <i data-feather="sun" class="block dark:hidden text-gray-700 dark:text-gray-300"></i>
+                        <i data-feather="moon" class="hidden dark:block text-light"></i>
+                        <i data-feather="sun" class="block dark:hidden text-gray-700"></i>
                     </button>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-4">
                         <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-primary hover:bg-primary/10">Home</a>
-                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-primary hover:bg-primary/10">About</a>
-                        <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-primary hover:bg-primary/10">Projects</a>
-                        <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-primary hover:bg-primary/10">Skills</a>
-                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-primary hover:bg-primary/10">Contact</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-light hover:text-primary hover:bg-primary/10">About</a>
+                        <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-light hover:text-primary hover:bg-primary/10">Projects</a>
+                        <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-light hover:text-primary hover:bg-primary/10">Skills</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-light hover:text-primary hover:bg-primary/10">Contact</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 dark:text-light hover:text-primary focus:outline-none">
                         <i data-feather="menu"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+        <div class="mobile-menu hidden md:hidden bg-white dark:bg-gunmetal shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-primary dark:text-white">Home</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary">About</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary">Projects</a>
-                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary">Skills</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary">Contact</a>
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-primary">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-white hover:text-primary">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-white hover:text-primary">Projects</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-white hover:text-primary">Skills</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-white hover:text-primary">Contact</a>
             </div>
         </div>
     </nav>
 
+
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-16">
+    <section id="home" class="bg-dark dark:bg-dark min-h-screen flex items-center pt-16">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-800 dark:text-white">
                         Hi, I'm <span class="gradient-text">Mahafuzur Rahman</span>
                     </h1>
-                    <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">Full Stack Python Developer</h2>
-                    <p class="text-gray-600 mb-8 max-w-lg">
+                    <h2 class="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6">Full Stack Python Developer</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-lg">
                         I build exceptional digital experiences with modern technologies. Passionate about creating efficient, scalable, and user-friendly applications.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#contact" class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+                        <a href="#contact" class="px-6 py-3 bg-primary text-black rounded-lg font-medium hover:bg-secondary transition duration-300">
                             Contact Me
                         </a>
-                        <a href="#projects" class="px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition duration-300">
+                        <a href="#projects" class="px-6 py-3 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition duration-300">
                             View Projects
                         </a>
                     </div>
@@ -144,14 +171,14 @@
                             <img src="http://static.photos/technology/640x360/42" alt="Mahafuzur Rahman" class="w-full h-full object-cover">
                             
                         </div> -->
-                        <div class="absolute -bottom-5 -right-0 bg-white p-4 rounded-lg shadow-lg">
+                        <div class="absolute -bottom-5 -right-0 bg-white dark:bg-gunmetal p-4 rounded-lg shadow-lg border border-primary/30">
                             <div class="flex items-center">
-                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-3">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-black mr-3">
                                     <i data-feather="code"></i>
                                 </div>
                                 <div>
-                                    <p class="text-xs text-gray-500">Currently working on</p>
-                                    <p class="font-medium text-gray-500">New Project</p>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">Currently working on</p>
+                                    <p class="font-medium text-gray-800 dark:text-white">New Project</p>
                                 </div>
                             </div>
                         </div>
@@ -162,62 +189,62 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-gunmetal dark:bg-gunmetal">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold mb-4 text-gray-400">About <span class="gradient-text">Me</span></h2>
+                <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">About <span class="gradient-text">Me</span></h2>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center" data-aos="fade-right">
-                    <div class="w-64 h-70 rounded-lg overflow-hidden shadow-xl">
+                    <div class="w-64 h-70 rounded-lg overflow-hidden shadow-xl border-2 border-primary/30">
                         <img src="/images/no_bg_self.png" alt="About Mahafuzur" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="md:w-2/3 md:pl-12" data-aos="fade-left">
-                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
-                    <p class="text-gray-600 mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Who am I?</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">
                         I'm a passionate Full Stack Developer with expertise in building web applications using modern technologies. With a strong foundation in computer science and years of hands-on experience, I specialize in creating efficient, scalable, and user-friendly digital solutions.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div class="flex items-start">
-                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
                                 <i data-feather="user" class="text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium mb-1">Name</h4>
-                                <p class="text-gray-600">Md Mahafuzur Rahman</p>
+                                <h4 class="font-medium mb-1 text-gray-800 dark:text-white">Name</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Md Mahafuzur Rahman</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
                                 <i data-feather="mail" class="text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium mb-1">Email</h4>
-                                <p class="text-gray-600">mfrahaman22@gmail.com</p>
+                                <h4 class="font-medium mb-1 text-gray-800 dark:text-white">Email</h4>
+                                <p class="text-gray-600 dark:text-gray-400">mfrahaman22@gmail.com</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
                                 <i data-feather="map-pin" class="text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium mb-1">Location</h4>
-                                <p class="text-gray-600">Barisal Sadar, Barishal, Bangladesh</p>
+                                <h4 class="font-medium mb-1 text-gray-800 dark:text-white">Location</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Barisal Sadar, Barishal, Bangladesh</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
                                 <i data-feather="briefcase" class="text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium mb-1">Experience</h4>
-                                <p class="text-gray-600">3+ Years</p>
+                                <h4 class="font-medium mb-1 text-gray-800 dark:text-white">Experience</h4>
+                                <p class="text-gray-600 dark:text-gray-400">3+ Years</p>
                             </div>
                         </div>
                     </div>
-                    <a href="/images/WEB LINKED MD MAHAFUZUR RAHAMAN RESUME.pdf" class="inline-flex items-center text-primary font-medium">
+                    <a href="/images/WEB LINKED MD MAHAFUZUR RAHAMAN RESUME.pdf" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
                         Download Resume <i data-feather="download" class="ml-2"></i>
                     </a>
                 </div>
@@ -226,49 +253,49 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-50">
+    <section id="skills" class="py-20 bg-dark dark:bg-dark">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold mb-4 text-gray-800">My <span class="gradient-text">Skills</span></h2>
+                <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">My <span class="gradient-text">Skills</span></h2>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div data-aos="fade-right">
-                    <h3 class="text-xl font-semibold mb-6">Technical Skills</h3>
-                    <div class="space-y-6 text-gray-400">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800 dark:text-white">Technical Skills</h3>
+                    <div class="space-y-6 text-gray-600 dark:text-gray-400">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">Python</span>
+                                <span class="font-medium text-gray-800 dark:text-white">Python</span>
                                 <span class="text-gray-600 dark:text-gray-400">95%</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="w-full bg-gray-300 dark:bg-steel rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 95%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">Django</span>
+                                <span class="font-medium text-gray-800 dark:text-white">Django</span>
                                 <span class="text-gray-600 dark:text-gray-400">90%</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="w-full bg-gray-300 dark:bg-steel rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">JavaScript/TypeScript</span>
+                                <span class="font-medium text-gray-800 dark:text-white">JavaScript/TypeScript</span>
                                 <span class="text-gray-600 dark:text-gray-400">85%</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="w-full bg-gray-300 dark:bg-steel rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">React.js</span>
-                                <span class="text-gray-600">75%</span>
+                                <span class="font-medium text-gray-800 dark:text-white">React.js</span>
+                                <span class="text-gray-600 dark:text-gray-400">75%</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="w-full bg-gray-300 dark:bg-steel rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
                             </div>
                         </div>
@@ -283,60 +310,60 @@
                         </div> -->
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">MongoDB</span>
-                                <span class="text-gray-600">75%</span>
+                                <span class="font-medium text-gray-800 dark:text-white">MongoDB</span>
+                                <span class="text-gray-600 dark:text-gray-400">75%</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="w-full bg-gray-300 dark:bg-steel rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">PostgreSQL</span>
-                                <span class="text-gray-600">70%</span>
+                                <span class="font-medium text-gray-800 dark:text-white">PostgreSQL</span>
+                                <span class="text-gray-600 dark:text-gray-400">70%</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="w-full bg-gray-300 dark:bg-steel rounded-full h-2.5">
                                 <div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div data-aos="fade-left">
-                    <h3 class="text-xl font-semibold mb-6">Professional Skills</h3>
-                    <div class="space-y-6 text-gray-600">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800 dark:text-white">Professional Skills</h3>
+                    <div class="space-y-6 text-gray-600 dark:text-gray-400">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">Problem Solving</span>
-                                <span class="text-gray-600">95%</span>
+                                <span class="font-medium text-gray-800 dark:text-white">Problem Solving</span>
+                                <span class="text-gray-600 dark:text-gray-400">95%</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="w-full bg-gray-300 dark:bg-steel rounded-full h-2.5">
                                 <div class="bg-secondary h-2.5 rounded-full" style="width: 95%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">Teamwork</span>
-                                <span class="text-gray-600">90%</span>
+                                <span class="font-medium text-gray-800 dark:text-white">Teamwork</span>
+                                <span class="text-gray-600 dark:text-gray-400">90%</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="w-full bg-gray-300 dark:bg-steel rounded-full h-2.5">
                                 <div class="bg-secondary h-2.5 rounded-full" style="width: 90%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">Communication</span>
-                                <span class="text-gray-600">85%</span>
+                                <span class="font-medium text-gray-800 dark:text-white">Communication</span>
+                                <span class="text-gray-600 dark:text-gray-400">85%</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="w-full bg-gray-300 dark:bg-steel rounded-full h-2.5">
                                 <div class="bg-secondary h-2.5 rounded-full" style="width: 85%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">Project Management</span>
-                                <span class="text-gray-600">80%</span>
+                                <span class="font-medium text-gray-800 dark:text-white">Project Management</span>
+                                <span class="text-gray-600 dark:text-gray-400">80%</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="w-full bg-gray-300 dark:bg-steel rounded-full h-2.5">
                                 <div class="bg-secondary h-2.5 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
@@ -344,28 +371,28 @@
                 </div>
             </div>
             <div class="mt-16" data-aos="fade-up">
-                <h3 class="text-xl font-semibold mb-6 text-center">Technologies I Work With</h3>
+                <h3 class="text-xl font-semibold mb-6 text-center text-gray-800 dark:text-white">Technologies I Work With</h3>
                 <div class="flex flex-wrap justify-center gap-6">
-                    <div class="w-16 h-16 bg-white rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-white dark:bg-gunmetal rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg hover:border hover:border-primary/50 transition duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-full h-full">
                     </div>
-                    <div class="w-16 h-16 bg-white rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-white dark:bg-gunmetal rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg hover:border hover:border-primary/50 transition duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-full h-full">
                     </div>
-                    <div class="w-16 h-16 bg-white rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-white dark:bg-gunmetal rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg hover:border hover:border-primary/50 transition duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-full h-full">
                     </div>
-                    <div class="w-16 h-16 bg-white rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-white dark:bg-gunmetal rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg hover:border hover:border-primary/50 transition duration-300">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tailwindcss.svg" alt="Tailwind CSS" class="w-full h-full">
                     </div>
-                    <div class="w-16 h-16 bg-white rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-white dark:bg-gunmetal rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg hover:border hover:border-primary/50 transition duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-full h-full">
                     </div>
-                    <div class="w-16 h-16 bg-white rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-white dark:bg-gunmetal rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg hover:border hover:border-primary/50 transition duration-300">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/postgresql.svg" alt="PostgreSQL logo" class="w-full h-full"
 />
                     </div>
-                    <div class="w-16 h-16 bg-white rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-white dark:bg-gunmetal rounded-lg shadow-md flex items-center justify-center p-2 hover:shadow-lg hover:border hover:border-primary/50 transition duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-full h-full">
                     </div>
                 </div>
@@ -374,38 +401,38 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white">
+    <section id="projects" class="py-20 bg-gunmetal dark:bg-gunmetal">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold mb-4 text-gray-400">My <span class="gradient-text">Projects</span></h2>
+                <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">My <span class="gradient-text">Projects</span></h2>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300" data-aos="fade-up">
+                <div class="bg-white dark:bg-dark rounded-xl shadow-md overflow-hidden hover:shadow-xl hover:border hover:border-primary/30 transition duration-300" data-aos="fade-up">
                     <div class="h-48 overflow-hidden">
                         <img src="http://static.photos/technology/640x360/1" alt="Project 1" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <div class="bg-primary/10 p-2 rounded-lg mr-3">
+                            <div class="bg-primary/20 p-2 rounded-lg mr-3">
                                 <i data-feather="code" class="text-primary"></i>
                             </div>
-                            <h3 class="text-xl font-semibold">E-commerce Platform</h3>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">E-commerce Platform</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
                             A full-featured e-commerce platform with payment integration, product management, and user authentication.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">React</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">Node.js</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">MongoDB</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">MongoDB</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
                                 <i data-feather="github" class="mr-1"></i> Code
                             </a>
-                            <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
                                 <i data-feather="external-link" class="mr-1"></i> Live
                             </a>
                         </div>
@@ -413,30 +440,30 @@
                 </div>
                 
                 <!-- Project 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white dark:bg-dark rounded-xl shadow-md overflow-hidden hover:shadow-xl hover:border hover:border-primary/30 transition duration-300" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-48 overflow-hidden">
                         <img src="http://static.photos/technology/640x360/2" alt="Project 2" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <div class="bg-primary/10 p-2 rounded-lg mr-3">
+                            <div class="bg-primary/20 p-2 rounded-lg mr-3">
                                 <i data-feather="code" class="text-primary"></i>
                             </div>
-                            <h3 class="text-xl font-semibold">Task Management App</h3>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Task Management App</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
                             A collaborative task management application with real-time updates, drag-and-drop interface, and team features.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">Vue.js</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">Firebase</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">Vue.js</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">Firebase</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">Tailwind CSS</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
                                 <i data-feather="github" class="mr-1"></i> Code
                             </a>
-                            <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
                                 <i data-feather="external-link" class="mr-1"></i> Live
                             </a>
                         </div>
@@ -444,38 +471,43 @@
                 </div>
                 
                 <!-- Project 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white dark:bg-dark rounded-xl shadow-md overflow-hidden hover:shadow-xl hover:border hover:border-primary/30 transition duration-300" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-48 overflow-hidden">
                         <img src="http://static.photos/technology/640x360/3" alt="Project 3" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <div class="bg-primary/10 p-2 rounded-lg mr-3">
+                            <div class="bg-primary/20 p-2 rounded-lg mr-3">
                                 <i data-feather="code" class="text-primary"></i>
                             </div>
-                            <h3 class="text-xl font-semibold">Portfolio Website</h3>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Portfolio Website</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
                             A responsive portfolio website showcasing projects, skills, and contact information with smooth animations.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">HTML5</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">CSS3</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">HTML5</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">CSS3</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">JavaScript</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
                                 <i data-feather="github" class="mr-1"></i> Code
                             </a>
-                            <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
                                 <i data-feather="external-link" class="mr-1"></i> Live
                             </a>
                         </div>
                     </div>
                 </div>
+
+
+
+
+                
             </div>
             <div class="text-center mt-12" data-aos="fade-up">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition duration-300">
+                <a href="#" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition duration-300">
                     View All Projects <i data-feather="arrow-right" class="ml-2"></i>
                 </a>
             </div>
@@ -483,39 +515,39 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <section id="contact" class="py-20 bg-dark dark:bg-dark">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold mb-4 text-gray-600">Get In <span class="gradient-text">Touch</span></h2>
+                <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">Get In <span class="gradient-text">Touch</span></h2>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
             <div class="flex flex-col md:flex-row">
                 <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8" data-aos="fade-right">
-                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
-                    <p class="text-gray-600 mb-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">Contact Information</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8">
                         Feel free to reach out to me for any questions or opportunities. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
                     </p>
                     <div class="space-y-6">
                         <div class="flex items-start">
-                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
                                 <i data-feather="mail" class="text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium mb-1 text-gray-400">Email</h4>
-                                <p class="text-gray-600">mfrahaman22@gmail.com</p>
+                                <h4 class="font-medium mb-1 text-gray-800 dark:text-white">Email</h4>
+                                <p class="text-gray-600 dark:text-gray-400">mfrahaman22@gmail.com</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
                                 <i data-feather="phone" class="text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium mb-1 text-gray-400">Phone</h4>
-                                <p class="text-gray-600">+880 1317 975131</p>
+                                <h4 class="font-medium mb-1 text-gray-800 dark:text-white">Phone</h4>
+                                <p class="text-gray-600 dark:text-gray-400">+880 1317 975131</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                                <div class="bg-primary/10 p-3 rounded-lg mr-4 flex items-center justify-center">
+                                <div class="bg-primary/20 p-3 rounded-lg mr-4 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" 
                                         width="24" height="24" 
                                         viewBox="0 0 24 24" 
@@ -527,57 +559,57 @@
 
                             
                             <div>
-                                <h4 class="font-medium mb-1 text-gray-400">WhatsApp</h4>
-                                <a href="https://wa.me/+8801317975131" class="text-gray-700">+880 1317 975131</a>
+                                <h4 class="font-medium mb-1 text-gray-800 dark:text-white">WhatsApp</h4>
+                                <a href="https://wa.me/+8801317975131" class="text-gray-600 dark:text-gray-400 hover:text-primary">+880 1317 975131</a>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
                                 <i data-feather="map-pin" class="text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium mb-1 text-gray-400">Location</h4>
-                                <p class="text-gray-600">Barisal Sadar, Barishal, Bangladesh</p>
+                                <h4 class="font-medium mb-1 text-gray-800 dark:text-white">Location</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Barisal Sadar, Barishal, Bangladesh</p>
                             </div>
                         </div>
                     </div>
                     <div class="mt-8">
-                        <h4 class="font-medium mb-4">Follow Me</h4>
+                        <h4 class="font-medium mb-4 text-gray-800 dark:text-white">Follow Me</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition duration-300">
+                            <a href="#" class="w-10 h-10 bg-white dark:bg-gunmetal rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-black border border-primary/30 transition duration-300">
                                 <i data-feather="github"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition duration-300">
+                            <a href="#" class="w-10 h-10 bg-white dark:bg-gunmetal rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-black border border-primary/30 transition duration-300">
                                 <i data-feather="linkedin"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition duration-300">
+                            <a href="#" class="w-10 h-10 bg-white dark:bg-gunmetal rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-black border border-primary/30 transition duration-300">
                                 <i data-feather="twitter"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition duration-300">
+                            <a href="#" class="w-10 h-10 bg-white dark:bg-gunmetal rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-black border border-primary/30 transition duration-300">
                                 <i data-feather="facebook"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="md:w-1/2" data-aos="fade-left">
-                    <form class="bg-white p-8 rounded-xl shadow-md">
+                    <form class="bg-white dark:bg-gunmetal p-8 rounded-xl shadow-md border border-primary/20">
                         <div class="mb-6">
-                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe">
+                            <label for="name" class="block text-gray-800 dark:text-white font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 bg-gray-100 dark:bg-dark border border-gray-300 dark:border-steel rounded-lg text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe">
                         </div>
                         <div class="mb-6">
-                            <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@example.com">
+                            <label for="email" class="block text-gray-800 dark:text-white font-medium mb-2">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 bg-gray-100 dark:bg-dark border border-gray-300 dark:border-steel rounded-lg text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@example.com">
                         </div>
                         <div class="mb-6">
-                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Subject">
+                            <label for="subject" class="block text-gray-800 dark:text-white font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 bg-gray-100 dark:bg-dark border border-gray-300 dark:border-steel rounded-lg text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Subject">
                         </div>
                         <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your message here..."></textarea>
+                            <label for="message" class="block text-gray-800 dark:text-white font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 bg-gray-100 dark:bg-dark border border-gray-300 dark:border-steel rounded-lg text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your message here..."></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+                        <button type="submit" class="w-full bg-primary text-black py-3 rounded-lg font-medium hover:bg-secondary transition duration-300">
                             Send Message <i data-feather="send" class="ml-2"></i>
                         </button>
                     </form>
@@ -587,7 +619,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-12">
+    <footer class="bg-gunmetal text-white py-12 border-t border-primary/20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
@@ -621,25 +653,25 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hidden">
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-black p-3 rounded-full shadow-lg hidden hover:bg-secondary transition">
         <i data-feather="arrow-up"></i>
     </button>
 
     <script>
         // Theme toggle
         const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
+        const body = document.body;
 
-        // Check for saved theme preference or use system preference
-        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
+        // Check for saved theme preference or default to dark
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.remove('dark');
         } else {
-            html.classList.remove('dark');
+            body.classList.add('dark');
         }
 
         themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            body.classList.toggle('dark');
+            localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
         });
 
         // Mobile menu toggle
