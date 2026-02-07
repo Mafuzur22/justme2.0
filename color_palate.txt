@@ -1,0 +1,83 @@
+Bold & Playful Creative (agency, content creator, youth-oriented brand)
+Primary: Vivid wasabi lime #84CC16 or emerald #10B981
+Secondary: Plum noir #6D28D9
+Accent: Hot magenta/fuchsia #EC4899
+Neutral: Deep charcoal + bright white
+
+
+Tailored Bold & Playful Creative Palette (Md Mafuzur Edition – 2026 Vibes)
+
+Primary (Main brand color – logo, headlines, key elements): Vivid Wasabi / Electric Chartreuse
+HEX: #84CC16 (or slightly deeper #76C70F for better contrast)
+→ This screams bold + playful energy — the "defiant" green from Pinterest trends. Feels fresh, creative, and youthful.
+Secondary 1 (Supporting bold – sections, icons, hover states): Plum Noir / Deep Vibrant Purple
+HEX: #6D28D9 (or richer #5B21B6)
+→ Adds mystery + sophistication to balance the brightness. Great for depth in dark mode or creative accents.
+Secondary 2 (Fun pop – highlights, secondary buttons): Hot Magenta / Fuchsia
+HEX: #EC4899 (or slightly warmer #E11D48 for cherry-coded vibe)
+→ Pure playfulness — pairs amazingly with the green for that high-energy creative clash.
+Accent (Extra fun / calls-to-action, underlines, alerts): Persimmon / Joyful Orange
+HEX: #F05A28 (or brighter #F97316)
+→ Brings unfiltered joy and warmth — use sparingly for "wow" moments.
+Neutral Dark (Backgrounds, text on light, dark mode base): Deep Charcoal / Almost Black
+HEX: #0F172A or #111827
+→ Grounds everything so the brights don't feel overwhelming.
+Neutral Light (Backgrounds, cards, text on dark): Bright White / Off-White
+HEX: #FFFFFF or very soft #FAFAFA
+→ Keeps things clean + modern.
+
+Metallic Greenish Bold & Playful Palette (Md Mafuzur – Chrome Emerald Edition)
+
+Primary (Main metallic green – logo core, headlines, key icons): Metallic Emerald / Chrome Green
+HEX: #00C853 (vibrant base) or gradient from #00D062 → #00674F for that liquid metallic depth
+→ This is a rich, shiny emerald-green that feels luxurious and futuristic — like polished chrome with green undertones. Use gradients or subtle shine effects in design tools for true metallic look.
+Secondary 1 (Deep metallic support – backgrounds, sections, depth): Deep Racing Green / Metallic Forest
+HEX: #14452F (or #0F5132 for darker British Racing Green vibe)
+→ Grounds the palette with sophisticated metallic depth — perfect for dark mode or shadowy accents.
+Secondary 2 (Bright playful pop – highlights, icons, hovers): Neon Wasabi Metallic
+HEX: #84CC16 (keep this electric lime for bold contrast) or slightly toned #76C70F
+→ Retains the original playful energy but pairs amazingly with metallic emerald for that "glowing chrome" clash.
+Accent (Fun metallic highlights / CTAs, underlines, alerts): Hot Magenta Metallic
+HEX: #EC4899 (or warmer #E11D48)
+→ Adds vibrant, jewel-like pop — imagine metallic fuchsia accents on green chrome for ultra-bold creative energy.
+Extra Metallic Accent (Luxury shine – subtle borders, stars, effects): Metallic Gold / Warm Chrome
+HEX: #D4AF37 (soft gold) or #FFD700 for brighter shine
+→ Pairs classic with green metallics for premium, eye-catching luxury (very popular in brand palettes like emerald + gold).
+Neutral Dark (Main backgrounds, dark mode base): Deep Charcoal Metallic
+HEX: #0F172A or #1D2E28 (gunmetal/steel gray with subtle green undertone)
+→ Makes the greens "pop" like they're reflecting light off metal.
+Neutral Light (Cards, text on dark, light mode accents): Bright Silver / Off-White Metallic
+HEX: #E0E0E0 or pure #FFFFFF with subtle gradient sheen
+→ Keeps everything clean and modern.
+
+
+Updated Palette (Metallic Greenish on Black-White Dominant – 60-30-10)
+
+Primary (60% usage – shades of black & white only)
+These form the core structure, backgrounds, large areas, text blocks, and overall mood.
+Deep Matte Black / Charcoal Black HEX: #0A0F1A or #111111 (near-black for depth)
+Gunmetal / Metallic Black HEX: #1A1F2E (subtle cool metallic sheen)
+Pure Black HEX: #000000 (for true voids/crisp edges)
+Bright White HEX: #FFFFFF (clean highlights, text on dark)
+Soft Off-White / Silver White HEX: #F5F5F5 or #E8ECEF (subtle metallic light for cards/gradients)
+→ Use these for: hero backgrounds, main sections, logo base/fill (black with green glow outline), cards, typography (white on black or black on white), footers. The black shades dominate for that premium, mysterious metallic canvas.
+Secondary (30% usage – supporting neutrals with faint metallic hints)
+Deep Racing Green-Black HEX: #0F2A1F (very dark green-tinted black for subtle depth)
+Metallic Gray / Steel HEX: #2D3748 or #4A5568 (cool metallic neutral bridge)
+Dark Silver HEX: #A0AEC0 (lighter metallic for borders/hovers)
+→ These add nuance to the 30% without introducing color — think subtle gradients from black to steel for chrome-like transitions.
+Accent (10% usage – the metallic greenish pops)
+Metallic Emerald / Chrome Green HEX: #00C853 (vibrant glowing base)
+Deep Emerald Glow HEX: #00674F (darker for shadows/reflections)
+Neon Wasabi Metallic HEX: #84CC16 (electric lime for extra playfulness)
+Hot Magenta Metallic HEX: #EC4899 (optional spicy pop, keep very minimal)→ Use sparingly for: CTAs/buttons (glowing green on black), icons/highlights, underlines, hover effects, logo accents/glows, subtle gradients (e.g., emerald shining out of black). This is where the "metallic greenish tone" lives — as reflective, holographic, or neon chrome effects.
+
+
+primary: '#00C853',
+secondary: '#84CC16',
+accent: '#EC4899',
+dark: '#0A0F1A',
+gunmetal: '#1A1F2E',
+steel: '#2D3748',
+emerald: '#00674F',
+light: '#F5F5F5'
