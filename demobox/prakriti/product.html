@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#1c1c17",
+                    "on-surface": "#1d1b17",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#bacbb9",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f5f0e8",
+                    "outline-variant": "#c3c8c1",
+                    "surface-container-low": "#f8f3eb",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#536254",
+                    "tertiary": "#52514b",
+                    "primary-fixed": "#d6e7d5",
+                    "on-background": "#1d1b17",
+                    "primary": "#455547",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e7e2da",
+                    "surface-dim": "#ded9d2",
+                    "on-primary-fixed-variant": "#3b4a3d",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#5d6d5e",
+                    "inverse-surface": "#32302b",
+                    "outline": "#747872",
+                    "tertiary-fixed-dim": "#c9c6bf",
+                    "on-tertiary-fixed-variant": "#474741",
+                    "on-secondary-container": "#783613",
+                    "on-secondary-fixed": "#351000",
+                    "tertiary-fixed": "#e5e2da",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#ffb694",
+                    "surface-variant": "#e7e2da",
+                    "on-surface-variant": "#434843",
+                    "primary-fixed-dim": "#bacbb9",
+                    "secondary-fixed": "#ffdbcc",
+                    "surface": "#fef9f1",
+                    "secondary-container": "#fea276",
+                    "on-tertiary-container": "#ece9e1",
+                    "on-primary-container": "#ddeedb",
+                    "surface-container-high": "#ede7e0",
+                    "tertiary-container": "#6a6963",
+                    "secondary": "#924b26",
+                    "on-secondary-fixed-variant": "#753411",
+                    "background": "#fef9f1",
+                    "on-primary-fixed": "#111f13",
+                    "surface-container": "#f3ede5",
+                    "surface-bright": "#fef9f1",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"],
+                    "label-sm": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }
+.linen-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA8qP5eLJ-0RIx7DN_J9yQGaptV3oyuvHIBMvcgv_IHhxgfkzw-FC97pwr9t1eiB83R_KcPp4SrWgyOFjT-KnvzUwi0VOAJIEaCje97_qD92npV6nN-eN_aY80VdC7DpaAAS4ZBBIamg8Z8PI3qcfgHJASPe3gD9rwVbXABvnozVuqvG67e6NxxAWhTZgWoT4GDlw5Xxzr7jnIPvU97JJxZdVHKtmavCqj4OaUn9QDMwEvN1Xjx6TU-MxfuGVRWspDXkM3BNCjvcZw);
+    opacity: 0.03;
+    pointer-events: none
+    }
+.clay-stamp {
+    background: rgba(146, 75, 38, 0.08);
+    border: 1px solid rgba(146, 75, 38, 0.2)
+    }</style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-sm shadow-primary/5">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim italic cursor-pointer transition-transform active:scale-95">
+                Prakriti
+            </div>
+<div class="hidden md:flex gap-margin-mobile items-center">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-300 hover:text-secondary" href="#">Organic Food</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-300 hover:text-secondary" href="#">Herbal</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-300 hover:text-secondary" href="#">Handmade</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="cursor-pointer transition-transform active:scale-95 text-primary">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div class="cursor-pointer transition-transform active:scale-95 text-primary">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
+<div class="absolute inset-0 linen-texture"></div>
+<!-- Product Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-margin-desktop items-start">
+<!-- Gallery Grid (Asymmetric) -->
+<div class="md:col-span-7 grid grid-cols-2 gap-4">
+<div class="col-span-2 aspect-[4/5] overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A premium close-up of a glass jar filled with rich, golden Sundarbans Honey. The lighting is soft and warm, highlighting the viscous texture and amber clarity of the liquid. The jar sits on a rustic wooden surface with sun-drenched shadows, creating a tranquil, high-end organic aesthetic. The color palette is dominated by warm honey golds, earthy browns, and soft cream tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKdR5MQOwdP56VuNXMAxmGJK0DkTwrkOxtQ-mtbk5iaUVIsKjhUh3QVn2ha2fZQ_yROKCwvI87xkxZU2xF_kmrmhhMdCDZMaFAXZeg4U0r1vs445IbvIcKlRUt9XXhzA69tLiGDcIfZ8djWr8W29hNYuU5NpxR0C_hKulE15OugrDFJrZ_A9FeCovrHuQ6mnrOXPejAhn_j7bRHeHnl9eCiwWg7q4r_OXiN2ZBTHJbhLZAhazuTWQPZ2R11fBFCZ2g7le0XwDrOcI"/>
+</div>
+<div class="aspect-square overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Macro photography of honeycomb dripping with fresh honey. The golden light catches the hexagonal patterns and glistening nectar. The scene is set against a blurred natural green background, emphasizing organic origin and purity. The mood is authentic and artisanal, maintaining a minimalist yet tactile visual language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeWWK9ZK0zvm7xwtwF93XZE8u-_3Z4lihecR53IKiZf9s-TpNEu1cYAj17K0851W3LD8of6neYQ3G5iv7wZzsoIZEQ0eDo-hbX5crEQH1qxkHcrCs_XAvw062_to6zVRq-2dR6GTlbedkueHfkvGumIHuQnvkRs0ACzOBVNjbUR0ZYs_HlzYvkbakMuDv-shRHU9bmSdQnx4OAhRIBTHK6W6RGhU0xM_DxmYrFeBWawEjtzWjRDbErRCwhnMPBfmB_3f-q5axRlAE"/>
+</div>
+<div class="aspect-square overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Artistic shot of a wooden honey dipper being lifted from a ceramic bowl, thick honey trailing off in a slow ribbon. The background features a textured linen cloth in cream and muted sage green. The lighting is low-key and directional, casting soft ambient shadows that define the liquid's volume and organic richness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3fGmRdL4Gr1UvBN96sjO2gg-q8Us-WezJnnlUxv27nwAXgQDC8pwVT8sd9RyBmW2fNy3FpBOArE7i5pk0yT_3eTbaDaRjZCxgr5iHlQi_ODnw4tFLiRH1pKRRDTWNJn3W9E5c5gU144N5_oW1dTiimg6bnpAlaVOYrJhVbbGv7JdC8eIIEwCIpGpxgd-Q9KRzJX3XoJNMB9bWP1NPSH7vvhNQ3Mo4TmQ6kCVEIwMkItiQYeFY0mT8FvmkfQciINsBpcm167Bwzcg"/>
+</div>
+</div>
+<!-- Product Details -->
+<div class="md:col-span-5 sticky top-32 space-y-unit">
+<div class="flex items-center gap-2 mb-4">
+<span class="clay-stamp px-3 py-1 rounded-full text-secondary font-label-sm text-label-sm">অর্গানিক ও খাঁটি</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface leading-tight">Sundarbans Honey</h1>
+<h2 class="font-headline-md text-headline-md text-primary italic opacity-80">(সুন্দরবনের মধু)</h2>
+<p class="font-headline-md text-headline-md text-secondary mt-6">৳৮৫০</p>
+<div class="pt-6 border-t border-outline-variant/30 space-y-4">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        সুন্দরবনের গহীন অরণ্য থেকে সংগৃহীত এই মধু সম্পূর্ণ প্রাকৃতিক ও প্রক্রিয়াজাতকরণহীন। এতে রয়েছে খলিশা ও গড়ান ফুলের নির্যাস যা স্বাদে অনন্য এবং গুণে অতুলনীয়।
+                    </p>
+<div class="space-y-3 pt-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">প্রাকৃতিক অ্যান্টি-অক্সিডেন্ট সমৃদ্ধ</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">হজমে সহায়তা করে</span>
+</div>
+</div>
+</div>
+<div class="pt-10 space-y-4">
+<button class="w-full py-5 bg-primary text-on-primary font-body-lg text-body-lg rounded hover:bg-primary-container transition-all active:scale-[0.98]">
+                        ঝুড়িতে যোগ করুন (Add to Cart)
+                    </button>
+<button class="w-full py-5 border border-primary text-primary font-body-lg text-body-lg rounded hover:bg-primary/5 transition-all">
+                        এখনই কিনুন (Buy Now)
+                    </button>
+</div>
+<!-- Reviews Summary -->
+<div class="pt-8 flex items-center gap-4">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">৪.৮ (১২০+ রিভিউ)</span>
+</div>
+</div>
+</div>
+<!-- Bento Section: Origin & Ingredients -->
+<section class="mt-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Origin Map -->
+<div class="md:col-span-2 bg-surface-container rounded-xl p-gutter overflow-hidden relative min-h-[400px]">
+<div class="relative z-10 max-w-xs">
+<h3 class="font-headline-md text-headline-md mb-4">উৎপত্তিস্থল: সুন্দরবন</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        বাংলাদেশের দক্ষিণ-পশ্চিমাঞ্চলে অবস্থিত বিশ্বের বৃহত্তম ম্যানগ্রোভ বন সুন্দরবনের গহীন অংশ থেকে আমাদের মৌয়ালরা জীবনের ঝুঁকি নিয়ে এই মধু সংগ্রহ করেন।
+                    </p>
+</div>
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-multiply">
+<img class="w-full h-full object-cover" data-alt="A detailed topographic and artistic map of the Sundarbans mangrove forest. The map features organic green and blue tones representing the complex network of tidal waterways and dense foliage. It has a vintage, heritage feel with subtle calligraphic labels in Bengali. The visual style is premium and educational, focusing on the unique geography of the honey's origin." data-location="Sundarbans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSEDUMC4nr_zrR6e_UyIXk-bePDCSOfwdbhylqZjPRvmSjb5pbdcG-xMMUJzNuRUG06SThfX5tJF9o7Lht_TzDV-urI5Z8N9n_MqE0zJ2gqL2RU2XtoV-uBjMh82CszUYP3ZMR_4fiRKuvvWjXByqdToPz7Lfeudwhli7gNdclpQG_6uPAXtha8_0C8i0m010FZVIel9ADaGrXDkvm7iDOvMRUSOXc5l5W6FSh1jQX01Fsluh_j5HD74jx4V5BpJ2ZTSZ4UG-pq-E"/>
+</div>
+</div>
+<!-- Ingredients -->
+<div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl p-gutter flex flex-col justify-center">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="nature">nature</span>
+<h3 class="font-headline-md text-headline-md mb-4">উপাদানসমূহ</h3>
+<ul class="space-y-3 font-body-lg text-body-lg">
+<li>• ১০০% বিশুদ্ধ প্রাকৃতিক মধু</li>
+<li>• কোনো কৃত্রিম রঙ নেই</li>
+<li>• কোনো চিনি মেশানো হয়নি</li>
+<li>• কোনো প্রিজারভেটিভ নেই</li>
+</ul>
+</div>
+</section>
+<!-- Calligraphy & Narrative -->
+<section class="mt-margin-desktop text-center max-w-2xl mx-auto py-12">
+<div class="mb-8 opacity-10">
+<span class="font-headline-xl text-headline-xl">প্রকৃতি</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-6">পরম্পরা ও বিশুদ্ধতা</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">
+                "আমরা বিশ্বাস করি প্রকৃতির দান শ্রেষ্ঠ। সুন্দরবনের এই মধু কেবল একটি পণ্য নয়, এটি আমাদের ঐতিহ্যের এক অমূল্য অংশ যা আমরা সরাসরি আপনার ঘরে পৌঁছে দিচ্ছি।"
+            </p>
+</section>
+<!-- Customer Reviews Grid -->
+<section class="mt-margin-desktop">
+<h3 class="font-headline-md text-headline-md mb-8 text-center">গ্রাহকদের মতামত</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-gutter bg-surface-container-low rounded-lg shadow-sm">
+<div class="flex text-secondary mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-4">"মধুর স্বাদ এবং ঘ্রাণ অপূর্ব! বাজারের অন্য মধুর চেয়ে এটি অনেক আলাদা এবং খাঁটি মনে হয়েছে।"</p>
+<p class="font-label-sm text-label-sm font-bold">— আনিসুর রহমান</p>
+</div>
+<div class="p-gutter bg-surface-container-low rounded-lg shadow-sm">
+<div class="flex text-secondary mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-4">"প্যাকিং খুব প্রিমিয়াম। উপহার দেওয়ার জন্য এটি চমৎকার একটি বিকল্প।"</p>
+<p class="font-label-sm text-label-sm font-bold">— সাদিয়া ইসলাম</p>
+</div>
+<div class="p-gutter bg-surface-container-low rounded-lg shadow-sm">
+<div class="flex text-secondary mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-4">"দ্রুত ডেলিভারি পেয়েছি। মধুর ঘনত্ব এবং স্বচ্ছতা প্রমাণ করে এটি একদম প্রাকৃতিক।"</p>
+<p class="font-label-sm text-label-sm font-bold">— তানভীর আহমেদ</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest w-full mt-auto">
+<div class="flex flex-col items-center gap-unit py-margin-desktop px-margin-mobile text-center">
+<div class="font-headline-lg text-headline-lg text-primary/10 select-none pointer-events-none mb-4">
+                Prakriti
+            </div>
+<div class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary/30 underline-offset-4" href="#">Sustainability</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary/30 underline-offset-4" href="#">Heritage</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary/30 underline-offset-4" href="#">Our Story</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary/30 underline-offset-4" href="#">Contact</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant opacity-60">
+                © 2024 Prakriti. Crafted with intention.
+            </div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shobuj Bazar | Premium Organic Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#e7bdb1",
+                        "secondary-fixed": "#e6e2d5",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#efeeeb",
+                        "tertiary-container": "#674940",
+                        "background": "#faf9f6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e3e2e0",
+                        "primary": "#154212",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#2c160e",
+                        "outline-variant": "#c2c9bb",
+                        "inverse-on-surface": "#f2f1ee",
+                        "surface-variant": "#e3e2e0",
+                        "on-background": "#1a1c1a",
+                        "on-primary-container": "#9dd090",
+                        "on-primary-fixed-variant": "#23501e",
+                        "on-tertiary-container": "#e3baae",
+                        "on-secondary-fixed-variant": "#48473d",
+                        "on-secondary-fixed": "#1d1c14",
+                        "surface-container-low": "#f4f3f1",
+                        "secondary-container": "#e3e0d2",
+                        "on-secondary-container": "#656358",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#2d5a27",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#002201",
+                        "on-surface": "#1a1c1a",
+                        "outline": "#72796e",
+                        "secondary": "#605f54",
+                        "surface": "#faf9f6",
+                        "primary-fixed": "#bcf0ae",
+                        "primary-fixed-dim": "#a1d494",
+                        "tertiary": "#4e332a",
+                        "tertiary-fixed": "#ffdbd0",
+                        "inverse-primary": "#a1d494",
+                        "inverse-surface": "#2f312f",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#3b6934",
+                        "on-surface-variant": "#42493e",
+                        "on-tertiary-fixed-variant": "#5d4037",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e8e5",
+                        "surface-dim": "#dbdad7",
+                        "surface-bright": "#faf9f6",
+                        "secondary-fixed-dim": "#cac7b9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hind Siliguri"],
+                        "body-md": ["Hind Siliguri"],
+                        "body-lg": ["Hind Siliguri"],
+                        "headline-lg-mobile": ["Hind Siliguri"],
+                        "headline-md": ["Hind Siliguri"],
+                        "headline-xl": ["Hind Siliguri"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "headline-xl": ["40px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(93, 64, 55, 0.08);
+        }
+        .leaf-pattern {
+            mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0C50 0 90 20 90 60C90 82.1 72.1 100 50 100C27.9 100 10 82.1 10 60C10 20 50 0 50 0Z" fill="black"/></svg>');
+            mask-size: contain;
+            mask-repeat: no-repeat;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80 docked full-width top-0 sticky z-50 border-b border-outline-variant/20 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit-2 max-w-container-max mx-auto h-16">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed">Shobuj Bazar</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Farmer Stories</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Recipes</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Organic Info</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="flex items-center bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full font-label-md scale-95 active:scale-90 transition-transform">
+<span class="mr-2">৳ 0.00</span>
+<span class="material-symbols-outlined text-[20px]">shopping_basket</span>
+</button>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-primary-container transition-all">account_circle</span>
+</div>
+</div>
+</nav>
+<!-- 1. Hero Banner -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden px-margin-mobile md:px-margin-desktop py-12">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-[0.9]" data-alt="A lush and vibrant organic farm in rural Bangladesh during the golden hour, featuring deep green vegetable rows stretching toward the horizon. The lighting is warm and natural, illuminating a serene landscape that feels high-end and fresh. Soft-focus elements of morning dew and vibrant green foliage fill the frame in a minimalist, light-mode aesthetic aligned with Forest Green and Cream tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvAUm_0C4LekeTz9mFNWwLbx1nbLg98I4_T4nRiVWIgsoJP_nHTUpzocrmIkaIT31hh55uu0EI_Grrqyf9twk7IUkVApCBBiJvSeldNeh3FZNmDWzQSprkZ8JiRnYv-AEhU2OST85gNNMZtxQckzEWkeJgbP1aqq3l5FkhU8hPOO6wJjSCjA_4ruS7-MAb14xvdVYBbUgmEv3KyhlKq7LrslbFQFxQ47knH3cvd68ODXbtArJLEJAQqMzrZ_zOHBE3X8rLTeQukzw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent"></div>
+</div>
+<!-- Floating Leaf Patterns -->
+<div class="absolute top-20 right-20 w-32 h-32 bg-primary/10 leaf-pattern rotate-12 -z-1 opacity-40"></div>
+<div class="absolute bottom-20 left-10 w-48 h-48 bg-primary/20 leaf-pattern -rotate-45 -z-1 opacity-20"></div>
+<div class="relative z-10 max-w-2xl">
+<span class="font-label-md text-label-md text-primary tracking-widest bg-primary-fixed/30 px-4 py-1 rounded-full mb-6 inline-block">১০০% প্রাকৃতিক ও নিরাপদ</span>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-6 leading-tight">শুদ্ধতায় ভরপুর, প্রকৃতির সেরা উপহার আপনার টেবিলে।</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">শবুজ বাজারের মাধ্যমে সরাসরি কৃষকের খেত থেকে সংগৃহীত বিষমুক্ত টাটকা শাক-সবজি ও ফলমূল পৌঁছে দিচ্ছি আপনার দোরগোড়ায়।</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-md text-label-md hover:shadow-lg transition-all active:scale-95">বাজার করুন</button>
+<button class="border-2 border-tertiary text-tertiary px-8 py-4 rounded-xl font-label-md text-label-md hover:bg-tertiary/5 transition-all">আমাদের গল্প</button>
+</div>
+</div>
+</section>
+<!-- 2. Featured Organic Vegetables (Bento Grid) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">সেরা জৈব সবজি</h2>
+<p class="text-on-surface-variant mt-2">আজকের সংগৃহীত টাটকা ও বিষমুক্ত সবজি</p>
+</div>
+<a class="text-primary font-bold hover:underline underline-offset-8" href="#">সবগুলো দেখুন →</a>
+</div>
+<a href="/demobox/shobuj_bazar/product.html" style="text-decoration: none; color: inherit;">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Product 1 -->
+<div class="glass-card rounded-3xl p-6 flex flex-col group transition-all hover:-translate-y-2">
+<div class="relative aspect-square mb-6 overflow-hidden rounded-2xl">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Close up shot of vibrant, vine-ripened red organic tomatoes still on the vine, glistening with tiny water droplets in a soft, bright studio setting. The color palette is dominated by deep forest green leaves and rich tomato reds against a clean cream background, embodying premium quality and freshness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXwhMeWZw2AncL0Cu7bohehYtqON56UqmlzdNpCszPim_JbDV0D6LhygAeeJtdHXUr32W3ftzr8CuhzOHStg6ZSsbSs7hYW9cMUpzUDsrtNyV7gcwPfVExcdT9MhiIHF1Il1jgIWF4c2n3G0iMmo4DVTmiwthsWj3VglrfmOsVK0Sdfc59xlvi9LthKGWjsbTUB3B2JqdrNP2M1IzCuXR1sJY3annX0PAjuj1P_4ufzXwe2rf5fHrKKV4kP6pOT2d8etTl-mMSfr0"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary text-[10px] px-3 py-1 rounded-full font-label-md">FRESH</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">জৈব টমেটো</h3>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-tertiary font-bold">৳১২০/কেজি</span>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="glass-card rounded-3xl p-6 flex flex-col group transition-all hover:-translate-y-2 md:mt-8">
+<div class="relative aspect-square mb-6 overflow-hidden rounded-2xl">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="A bundle of crisp, earthy orange organic carrots with their bright green leafy tops attached, lying on a minimalist wooden surface with soft side lighting. The aesthetic is clean, sophisticated, and earthy, focusing on the organic texture of the vegetables in a bright, modern kitchen environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD17BIfqk6lBbuqjcS61puzLBmKnRL2lYHloj7ET4hN4n2wULQ0pevzBHjLS4oVUs_5Eq_j9TfjIG-ShZc3KiadeQyqVE9qtIB2zmyVAtgDnv6DWGC6kfATmGYtEKceghn5LYDaiMgalhgI5q2wXhfunpuXTU8FUhwc9jAio11SJAfiId-VIZNja7Yi1em1klSHhIquW6i2KZMdTaTLCX52E4ABaOhwyr6GfHHWbUPvVLKExAnaHM14omeCAUKhx3iwrbsrfUHOQqU"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">দেশি গাজর</h3>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-tertiary font-bold">৳৯০/কেজি</span>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="glass-card rounded-3xl p-6 flex flex-col group transition-all hover:-translate-y-2">
+<div class="relative aspect-square mb-6 overflow-hidden rounded-2xl">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="A rustic basket filled with high-quality organic potatoes, showing various sizes and earthy textures. The lighting is soft and warm, highlighting the natural imperfections and cleanliness of the produce. The background is a muted cream tone that emphasizes the premium nature of these farm-fresh staples." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7LU3R58MsCShVGgotUD8QPeRWK7XV5WxjeOUWmiByTsiFhThv-V-NyDOJz2fereXLdEyMe8VVwkTZlhzKjEDo7YC2y1p1EBF2PchtuzrX88x2j3W5lRzlua8rl-HhHGaO07lRiJP8FAACqoMgzjTMECw55XxqxTMmJXpO4FowLDjSeRuakDItbkZiJENtKHH5i5HRXq0gRzzkFoKyc_O_wTvz5WJOskiVQhLShzRCE2bUaMFCyN_IfQS6JPfaVBFo3Hwu7X8G68g"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">অর্গানিক আলু</h3>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-tertiary font-bold">৳৫০/কেজি</span>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="glass-card rounded-3xl p-6 flex flex-col group transition-all hover:-translate-y-2 md:mt-8">
+<div class="relative aspect-square mb-6 overflow-hidden rounded-2xl">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Several vibrant purple organic eggplants with glossy skins and green caps, arranged artfully on a light cream surface. The composition uses high-key lighting to emphasize the rich deep purple color and smooth texture, creating a premium visual for a fresh marketplace interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC86Ayl6wjtFgfYXxFtAlRVkbV_AqMGkWmk6Fbp9dxUj2AE5kZE7Q1HxSJfT1YS_aEMUzOpMvCuQ0H4nBg5-O-Am63HfA_Bt861D7KPWWOEVw8tT5XvJSYLcK5-spW7qyaQ9npOqwYnWU4VYBMXA8QqFTSp0E_YKNyCtrrXea8gBmDAwWFwYmPsKpvX14BAbPdEe0ZgzlghUnTOa9-OzZP7zwoaAgWkEx_Cg36J7b-zxMmcjzFhmqF6fUc7hWYEnsdlZgsl-c1JCFk"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">বেগুন (গোল)</h3>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-tertiary font-bold">৳৮৫/কেজি</span>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</a>
+</section>
+<!-- 3. Fresh Fruits Carousel -->
+<section class="bg-surface-container-low py-24 overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary">মৌসুমী সতেজ ফল</h2>
+<p class="text-on-surface-variant">সরাসরি বাগান থেকে সংগৃহীত মিষ্টি ও রসালো ফলসমূহ</p>
+</div>
+<div class="flex space-x-6 overflow-x-auto px-margin-mobile md:px-margin-desktop hide-scrollbar pb-10">
+<!-- Fruit Item 1 -->
+<div class="min-w-[300px] bg-surface rounded-[40px] p-4 group">
+<div class="h-64 rounded-[32px] overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A stack of premium ripe yellow mangoes, showcasing their vibrant golden skin and smooth texture. The scene is illuminated by soft, natural sunlight that enhances the fruit's juiciness and freshness. The minimalist composition aligns with a luxury boutique marketplace aesthetic, using a warm and inviting color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuIxAuR5bzut6CApvSX7LQEzNuntun0BjxonH10g-c1OxzaNKK6nEkBHnkr4ggJ7E-jNssrpfQQVEpV9xcebfON-xLFKh5Z1IDx3PYSItc0YtRGF-_HPtIPu5BGzexI46VYjzxGPmE6Inb8EYvEN5g4LO1cQJp94fyZg6jEX6cTAZp1Bc7ZH-7eRN9rcQs_Ef4nXcTJQkIE8-gducnpkl5dkq_Wjrloqh4CD-azs1TLvhOY_iMcSPYXCJklbpvu-2z2-Vm_MZhmy4"/>
+</div>
+<div class="px-4 pb-4">
+<span class="text-label-sm text-secondary tracking-tighter">রাজশাহী থেকে</span>
+<h4 class="font-headline-md text-headline-md text-primary">হিমসাগর আম</h4>
+<p class="text-tertiary font-bold mt-2">৳১৮০ /কেজি</p>
+</div>
+</div>
+<!-- Fruit Item 2 -->
+<div class="min-w-[300px] bg-surface rounded-[40px] p-4 group">
+<div class="h-64 rounded-[32px] overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A bunch of bright yellow premium bananas, perfectly ripe with no blemishes, presented in a clean and modern visual style. The lighting is bright and even, highlighting the vibrant color against a neutral cream background. The focus is on the health and quality of the organic fruit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk71P9b5s-ennEpQ_NX0muiB3_qfsdLzl0vT0I-pwoJRM8Oj7rrzQFn5l2wR5SyCZ8Xxh0IvxPOWIpdbqMyCKfincvA5-pSKV73MW03HdnLbFhTIHXr5ELaFzsCLcHCG9eHIV-71iefAyCxyw2xodpEYmhEvp-sZM83hImTWb9cey-_qsvErCLKmKhOCkJ8V6XLC_oc6jqB_QvhhJhKWX5PZvaikmsrMPMnbiV_QImLEXY1k4q0tDH-rUCDMNuDCd8vHx6wkK2xIQ"/>
+</div>
+<div class="px-4 pb-4">
+<span class="text-label-sm text-secondary tracking-tighter">টাঙ্গাইল থেকে</span>
+<h4 class="font-headline-md text-headline-md text-primary">সাগর কলা</h4>
+<p class="text-tertiary font-bold mt-2">৳১০০ /ডজন</p>
+</div>
+</div>
+<!-- Fruit Item 3 -->
+<div class="min-w-[300px] bg-surface rounded-[40px] p-4 group">
+<div class="h-64 rounded-[32px] overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Fresh organic green apples piled in a modern ceramic bowl, with light reflecting off their crisp skins. The setting is a minimalist, light-filled dining space that emphasizes cleanliness and premium organic living. The color palette focuses on vibrant greens and soft whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkv9PQBQgL4m99HiOW2piQ2SNC6v_uoFHJkRJcGBPRUSnMotYdj3HupXoNS96EWGbNsd9WzrQoS24SNutugxAstBbZS9I6sukhnGmVMIAJwrY0GZN81mf57haVXeVGMxdmQpfveFuucPlcUityCftD-GKkuY5gQK48s45NW5C7ce43XsQqlmW4nM7fSv9bP2P7nDC9rL1Opv06xgJzk2CYz6tL860B2CPB-9q8yMmPvcye-VTV2VZBhdn1dxLrKwZEOqbjK0jx7uI"/>
+</div>
+<div class="px-4 pb-4">
+<span class="text-label-sm text-secondary tracking-tighter">সিলেট থেকে</span>
+<h4 class="font-headline-md text-headline-md text-primary">সবুজ আপেল</h4>
+<p class="text-tertiary font-bold mt-2">৳২৫০ /কেজি</p>
+</div>
+</div>
+<!-- Fruit Item 4 -->
+<div class="min-w-[300px] bg-surface rounded-[40px] p-4 group">
+<div class="h-64 rounded-[32px] overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Bright red pomegranate seeds spilled from a freshly cracked pomegranate, glistening like small jewels. The aesthetic is sophisticated and high-end, with a dramatic but soft lighting setup that highlights the richness of the red tones against a warm, earthy brown surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9lJv-xQ7Sl20khKwiAU5GAEKzSTSXB1Xx8Ohb9oejdHrc6E-VXQ0ayKHzynOGNr_1hbynSt6RlVdwPKXX0khgSzEP6pSNVoALuh8MTHBiQpxNv6KYZkrO_pdMxGxHqG51DggebkF0OOqGYs-P0NQIcQmV26EqYcNJwFQ7zAFBtLPnmAYMNAJgGm5YKjHPnqGsgT1n3QllHYslfy60ecChZ_NHkFtxMvtsgzeuIuQH7raURELe19ueFRRz-AtG03mL7lCpXIoI1SQ"/>
+</div>
+<div class="px-4 pb-4">
+<span class="text-label-sm text-secondary tracking-tighter">পার্বত্য চট্টগ্রাম থেকে</span>
+<h4 class="font-headline-md text-headline-md text-primary">বেদানা</h4>
+<p class="text-tertiary font-bold mt-2">৳৪৫০ /কেজি</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Why Organic? Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative overflow-hidden">
+<div class="absolute -right-20 top-20 w-64 h-64 bg-primary-fixed/20 leaf-pattern opacity-10"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="bg-primary/5 rounded-2xl p-8 transition-all hover:bg-primary/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-weight="fill">eco</span>
+<h5 class="font-headline-md text-headline-md text-primary mb-2">১০০% প্রাকৃতিক</h5>
+<p class="text-on-surface-variant text-label-md">কোনো প্রকার রাসায়নিক সার বা কীটনাশক ছাড়াই উৎপাদিত।</p>
+</div>
+<div class="bg-secondary-container/30 rounded-2xl p-8 transition-all hover:bg-secondary-container/50">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-weight="fill">health_and_safety</span>
+<h5 class="font-headline-md text-headline-md text-primary mb-2">পুষ্টিগুণ সমৃদ্ধ</h5>
+<p class="text-on-surface-variant text-label-md">প্রাকৃতিক উপায়ে চাষের ফলে ভিটামিন ও মিনারেলে ভরপুর।</p>
+</div>
+</div>
+<div class="space-y-4 mt-8">
+<div class="bg-tertiary-fixed/30 rounded-2xl p-8 transition-all hover:bg-tertiary-fixed/50">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-weight="fill">local_shipping</span>
+<h5 class="font-headline-md text-headline-md text-primary mb-2">সরাসরি কৃষক থেকে</h5>
+<p class="text-on-surface-variant text-label-md">মাঝারি কেউ নেই, তাই কৃষক পায় সঠিক দাম আর আপনি পান সেরা মান।</p>
+</div>
+<div class="bg-primary-fixed/20 rounded-2xl p-8 transition-all hover:bg-primary-fixed/40">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-weight="fill">nature_people</span>
+<h5 class="font-headline-md text-headline-md text-primary mb-2">পরিবেশ বান্ধব</h5>
+<p class="text-on-surface-variant text-label-md">মাটির স্বাস্থ্য রক্ষা করে ভবিষ্যৎ প্রজন্মের জন্য নিরাপদ পৃথিবী।</p>
+</div>
+</div>
+</div>
+<div>
+<span class="text-primary font-bold tracking-widest block mb-4 uppercase text-label-sm">নিরাপদ খাদ্যের অঙ্গীকার</span>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-8">কেন আমাদের জৈব পণ্য বেছে নেবেন?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">বাজারে পাওয়া অধিকাংশ সবজিতেই থাকে ক্ষতিকর প্রিজারভেটিভ আর কেমিক্যাল। শবুজ বাজার বিশ্বাস করে সুস্থ থাকার মূলমন্ত্র হলো শুদ্ধ খাবার। আমাদের প্রতিটি পণ্য আপনার পরিবারের সুস্বাস্থ্য নিশ্চিত করে।</p>
+<button class="bg-primary text-on-primary px-10 py-5 rounded-full font-label-md hover:shadow-2xl transition-all">বিস্তারিত জানুন</button>
+</div>
+</div>
+</section>
+<!-- 5. Local Farmer Stories -->
+<section class="bg-primary py-24 relative overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-primary-fixed mb-16 text-center">আমাদের অদম্য কৃষকদের গল্প</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Story 1 -->
+<div class="flex flex-col md:flex-row bg-white/5 backdrop-blur-md rounded-[40px] p-8 border border-white/10 items-center">
+<div class="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary-fixed mb-6 md:mb-0 md:mr-8">
+<img class="w-full h-full object-cover" data-alt="A dignified Bangladeshi farmer with a warm, genuine smile standing in his green organic vegetable field. He is wearing a traditional simple lungi and shirt. The lighting is soft and golden from the late afternoon sun, creating an atmosphere of trust, wisdom, and connection to the earth. The background is a vibrant, healthy organic farm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnm37yoXJq0vNw4-lK5y63gUffAYHQ7Fi_W9I3Awp5qyCZ1EnTlr_XyC5a2MBDXzu1qioMUtP5PP40cCVST79b9p5wEZyL4mdmmPRubUXfy5M-0YGVzB4u6PGZmyMqkSD5OyzJJpGGPe0p676vtU6eB47PbIZH8kMdOSeaRud9XEf9cIBaw670u26ixkCxheCn41QfJ_JiKFuFKkgiU62C_cf1LD4INo-BNpirYU0rJRKfWbEOt2ZpGa55HiBGt7WlqZ_Xf4rp5rM"/>
+</div>
+<div>
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-4">format_quote</span>
+<p class="text-primary-fixed/90 font-body-lg italic mb-4">"আমি বিশ বছর ধরে চাষ করি। শবুজ বাজারের সাথে যুক্ত হয়ে এখন আমি কোনো বিষ ব্যবহার না করেই ফসল ফলাই এবং ভালো দাম পাই।"</p>
+<h6 class="text-primary-fixed font-bold">আব্দুল আলীম</h6>
+<p class="text-primary-fixed-dim text-label-sm">সারিয়াকান্দি, বগুড়া</p>
+</div>
+</div>
+<!-- Story 2 -->
+<div class="flex flex-col md:flex-row bg-white/5 backdrop-blur-md rounded-[40px] p-8 border border-white/10 items-center">
+<div class="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary-fixed mb-6 md:mb-0 md:mr-8">
+<img class="w-full h-full object-cover" data-alt="A portrait of a resilient female farmer in Bangladesh, smiling warmly as she holds a basket of fresh organic produce. Her face shows character and dedication. The setting is a serene, sunlit rural farm environment with lush greenery in the background, reinforcing the brand's commitment to community and natural quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDctuT9PyXz6he8VtWaDCi2aVBtndVJd31za6044oBch2tV8nUyZd53kNgV5FHaR9fWAphQ5dmNTKthbJV85xam55vxabhw7_BomEylN2iUQLmAEh5AWCvIFeQJbbrXz9pzowUsDeTVnHG5OmDLpQK_ceoj6FoJDvCimnJP1famo73JWg2PWtwBjwOzK2_NCYqXBQsAl3PgasYNe_SffINoZ2I-F7NEhDqToYz7DD6HjaqP21EN0jPX3BLatvMcucjBuR8arVU91SM"/>
+</div>
+<div>
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-4">format_quote</span>
+<p class="text-primary-fixed/90 font-body-lg italic mb-4">"নিজের সন্তানদের যেমন যত্নে বড় করি, আমার খেতের ফসলগুলোকেও আমি তেমনি যত্নে বড় করি। শবুজ বাজার সেই যত্নের মূল্য দেয়।"</p>
+<h6 class="text-primary-fixed font-bold">মরিয়ম বেগম</h6>
+<p class="text-primary-fixed-dim text-label-sm">কালিগঞ্জ, ঝিনাইদহ</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Best-selling Products -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12 text-center">জনপ্রিয় পণ্যসমূহ</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Best Seller 1 -->
+<div class="glass-card rounded-[32px] overflow-hidden group">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="A jar of rich, golden-brown organic honey with a wooden honey dipper resting on top. The background is soft and minimalist with warm, golden-hour lighting that emphasizes the pure, thick texture of the honey. The composition is elegant and premium, evoking a sense of natural sweetness and quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-qA8uxzkh69ezsujzuZujcsAS-qB5hiAR5gvrMjuJ70wyvlHBiXxDwt6cNpK0doVlt8_1Gwm9zpFug_KXEnhD6JuvnmPuSm2JiZXY_6rXjq19dt6dBAkkJNqyR_X1tpqHOPiO47TlKybgoXd3lwkoY0QzWGyftR6oQvyn7ILEum37meBObY-3M0M53o89x3R-2qpFCBaFDL8ia5eejEmQWA9rCJm4p5fSZZ3qcmk79RoGPX8cLMyJLAXG9z0lcXmlOaIwpMY9aBU"/>
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-[10px] font-bold">BEST SELLER</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">অর্গানিক মধু</h3>
+<p class="text-on-surface-variant text-label-sm mb-4">৫০০ গ্রাম পিওর মধু</p>
+<div class="flex justify-between items-center">
+<span class="text-tertiary font-bold">৳৬৫০</span>
+<button class="bg-primary-container text-on-primary-container p-2 rounded-xl scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Best Seller 2 -->
+<div class="glass-card rounded-[32px] overflow-hidden group">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="A bottle of golden cold-pressed organic oil surrounded by raw organic seeds on a minimalist light-colored surface. The lighting is crisp and bright, showing the transparency and purity of the oil. The design language is high-end, clean, and healthy, consistent with the Forest Green and Cream theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBL07KyZUfP-OxjoLkT1CfGe7u_Nj9-3tlarNPBC_lNoFFp2HTQCP6TiUCmD9LTxz1OpDvHT3R6yB2Vo--bYIoiOKWNgbozK9GX22qH3agK-cSRMbGQo7AHCDW7ZRi0yUET607ty8rDiA7hTwPDxqxcXDsCIJBiTRnZBQItcM1EaVq-F-zQf4zs8jlazvCB2WD-E93Wy4jdcMFKs2EHOJ5kXeTAGYk0PVu0czTZ2601MHZoxRjH-RVYm7_ouYCdY519gjh4DdBDrU"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">খাঁটি সরিষার তেল</h3>
+<p class="text-on-surface-variant text-label-sm mb-4">১ লিটার ঘানি ভাঙা</p>
+<div class="flex justify-between items-center">
+<span class="text-tertiary font-bold">৳৩২০</span>
+<button class="bg-primary-container text-on-primary-container p-2 rounded-xl scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Best Seller 3 -->
+<div class="glass-card rounded-[32px] overflow-hidden group">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="A heap of high-quality organic brown rice grains on a traditional woven mat. The lighting is warm and natural, accentuating the earthy tones and texture of the grains. The scene is clean and sophisticated, representing a staple premium product in an organic marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTSyG7488IwM2uiJMv4tPI-tYT4wr12hv7PRJ1oo15dAAvgT2zX6KiHUk5Qeb13lqOyhDE6aLUobgsB7GzCMu8c2sgm_qBwvNHH1P_VUZsMInF9AfnrmS3UK97irPbCwCp4_leg9KuZVFWFjoYcZDfgd272Pa2EI9WOaNzeM5vl1QHeLo4l10nT1AMhosMwsaw53UAeneL1XsTXsrgi2ZAViDhTVoJr8n3C8LeNFmFiWAUScNd9XNnfe_MU5KPvSEt9BUNDv4lZhc"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">লাল চাল</h3>
+<p class="text-on-surface-variant text-label-sm mb-4">১ কেজি প্রিমিয়াম</p>
+<div class="flex justify-between items-center">
+<span class="text-tertiary font-bold">৳১২০</span>
+<button class="bg-primary-container text-on-primary-container p-2 rounded-xl scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Best Seller 4 -->
+<div class="glass-card rounded-[32px] overflow-hidden group">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="A rustic ceramic bowl filled with assorted organic lentils in different colors (red, yellow, brown). The lighting is soft and top-down, creating gentle shadows and emphasizing the clean, high-quality nature of the pulses. The overall feel is one of health, tradition, and premium organic sourcing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg_wlX4BMF5nTT8NBVuKJB3tQTD4gFkwSsqsEp6y-uDnZAtvtOY9J9XUn_RDG8pI85KZSARg2KbVwxB7QRw_cDDWwNtWWvvGYXugQM0FkoNkpQQVt24creEmFmVk0vMQGZAGpQC3Z1KJlUo3Qa1wIHcxCrL0T2FwlGvNBx7xCNa28QugUHZ7oNQ8EaszCM0WUPSpNcRXR3oar2G9kZWyWj-YOgwjgDmCKnwyHVRybwIbwG6BDSfpaCyUmTiOhK3SGIhtxDDb49fro"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">দেশি মশুর ডাল</h3>
+<p class="text-on-surface-variant text-label-sm mb-4">৫০০ গ্রাম হ্যান্ডপিকড</p>
+<div class="flex justify-between items-center">
+<span class="text-tertiary font-bold">৳১৫০</span>
+<button class="bg-primary-container text-on-primary-container p-2 rounded-xl scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Customer Reviews -->
+<section class="py-24 bg-surface-container overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">গ্রাহকদের কথা</h2>
+<p class="text-on-surface-variant">আমাদের গ্রাহকদের আস্থার প্রতিফলন</p>
+</div>
+<div class="flex flex-nowrap space-x-8 px-margin-mobile md:px-margin-desktop hide-scrollbar">
+<!-- Review Card 1 -->
+<div class="min-w-[350px] glass-card p-10 rounded-[48px] border-white/40">
+<div class="flex text-primary-container mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-on-surface mb-8 italic">"শবুজ বাজারের টমেটো আর গাজরগুলো সত্যিই অসাধারণ। বাজারের অন্য যেকোনো সবজির চেয়ে এগুলো বেশি টাটকা আর সুস্বাদু।"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+<span class="font-bold text-primary">S</span>
+</div>
+<div>
+<h6 class="font-bold text-primary">শায়লা আহমেদ</h6>
+<p class="text-label-sm text-secondary">গুলশান-২, ঢাকা</p>
+</div>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="min-w-[350px] glass-card p-10 rounded-[48px] border-white/40">
+<div class="flex text-primary-container mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-on-surface mb-8 italic">"তাদের হোম ডেলিভারি সার্ভিস খুব ফাস্ট। আর প্যাকিং দেখেও বোঝা যায় তারা হাইজিন মেইনটেইন করে।"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+<span class="font-bold text-primary">R</span>
+</div>
+<div>
+<h6 class="font-bold text-primary">রাহাত কবির</h6>
+<p class="text-label-sm text-secondary">বনানী, ঢাকা</p>
+</div>
+</div>
+</div>
+<!-- Review Card 3 -->
+<div class="min-w-[350px] glass-card p-10 rounded-[48px] border-white/40">
+<div class="flex text-primary-container mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-on-surface mb-8 italic">"মধু আর ঘিটা সত্যিই খাঁটি। বাচ্চাদের জন্য নিরাপদ খাবার নিয়ে চিন্তিত ছিলাম, শবুজ বাজার সমাধান দিয়েছে।"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+<span class="font-bold text-primary">F</span>
+</div>
+<div>
+<h6 class="font-bold text-primary">ফাতেমা জোহরা</h6>
+<p class="text-label-sm text-secondary">উত্তরা, ঢাকা</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Healthy Recipes Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">স্বাস্থ্যকর রেসিপি</h2>
+<button class="flex items-center text-primary font-bold hover:gap-2 transition-all">সবগুলো রেসিপি <span class="material-symbols-outlined ml-2">arrow_forward</span></button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Recipe 1 -->
+<div class="group cursor-pointer">
+<div class="relative h-96 rounded-[40px] overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A beautifully presented organic salad bowl featuring colorful fresh vegetables, quinoa, and soft-boiled eggs. The lighting is bright and airy, emphasizing the freshness and health benefits of organic eating. The aesthetic is sophisticated and minimalist, focusing on vibrant natural colors against a clean, premium background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANyQZ0lzo_rFjlY17D6S9Win57NiU2Elp842tEtjxlaXHit3vUtkLqe5BKQRGYOdBslnE7glEazdoB1QyRAQ8dvWoTFiS0XPmg5TSEHf36OARTul3jR3CcVFP_PjBmHufWk0CQ8d_fvSI0SdZNlDrPaT5eO76QKSMoDaonJXvdepzJCYHJ2MJdRtVgDkRe23uoSASnR-2IACFFCMOMaWskB3-cVHPLXXlrVVaU-Mh_ik8sG2AY5wpIZNAQ5lOgRr4ZmpALD_vRwlE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<span class="bg-primary-fixed/80 text-on-primary-fixed text-[10px] px-3 py-1 rounded-full font-bold mb-4 inline-block">১০ মিনিট</span>
+<h4 class="text-white font-headline-md text-headline-md">ফ্রেশ অর্গানিক সালাদ</h4>
+</div>
+</div>
+</div>
+<!-- Recipe 2 -->
+<div class="group cursor-pointer">
+<div class="relative h-96 rounded-[40px] overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A creamy, rich-textured organic vegetable soup in a ceramic bowl, garnished with fresh herbs and a swirl of organic oil. The scene is cozy and premium, with soft, directional lighting that highlights the depth of flavor and quality of the ingredients. The color palette is warm and inviting, fitting a luxury marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM-QmLUcfw66wv4gEtinL28PGaBp0jpPfVd9ecWVDYaM130_OWQZqcb0K5m7H16gnXtkLY9OPVLODUxh62_zE1NaJZDvMShMoYmZc6crjiFOUMK8c01EzWgrzioCz6i4Z2UzBZaAjcVqRLnc6hLLoz6AcdByI1qTVbPSXmhJ1SZmSgCsn-dGdf0YZ2GXS28sJ68KXaYgOfMmVpYaMyg9tveSVpnwjiZrCzpEWCGHjfGtF4C3AxEIvrkxwJIhk9gQpfkwmpB83c-_0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<span class="bg-primary-fixed/80 text-on-primary-fixed text-[10px] px-3 py-1 rounded-full font-bold mb-4 inline-block">২০ মিনিট</span>
+<h4 class="text-white font-headline-md text-headline-md">জৈব সবজির স্যুপ</h4>
+</div>
+</div>
+</div>
+<!-- Recipe 3 -->
+<div class="group cursor-pointer">
+<div class="relative h-96 rounded-[40px] overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A vibrant, fresh organic fruit smoothie in a tall glass, garnished with fresh berries and a mint leaf. The lighting is high-key and summery, making the colors pop and the drink look incredibly refreshing. The background is a blurred high-end kitchen, reinforcing a clean and healthy lifestyle theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFhwLl3UzN8qw6MiApakz3VdK4h_6luC9G2bsQS7CPvG_pgRlikFZk01YY_Nq3D84HzU1uBtPkO5MuX6K36iP1aj6OP5-xVPolfiJCn86akQ3hRg_CKup4HKi5ClHYD5rlTwGuLpSYWldpwB2n9-PesS0tKo5H0eI5ufMzd4I5vIFL43FdfWmJqjE3HfxqQpUgtgFCwdd6S6_9nuYWyJup0aBWzL_Nw_Ct7ZP7ZYp9fnuOPAIxYdefDfQ3X1g6gUDbWwUYkuNEkZ4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<span class="bg-primary-fixed/80 text-on-primary-fixed text-[10px] px-3 py-1 rounded-full font-bold mb-4 inline-block">০৫ মিনিট</span>
+<h4 class="text-white font-headline-md text-headline-md">ডিজিটাল ডিটক্স স্মুদি</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container full-width">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto border-t border-outline-variant/30">
+<div class="flex flex-col space-y-6">
+<div class="font-headline-md text-headline-md font-semibold text-primary dark:text-primary-fixed">Shobuj Bazar</div>
+<p class="text-on-surface-variant font-body-md">বাংলাদেশের আনাচ-কানাচ থেকে সবচেয়ে বিশুদ্ধ এবং টাটকা পণ্য সরাসরি আপনার জন্য।</p>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">social_leaderboard</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">photo_camera</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">mail</span>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<h6 class="font-bold text-primary font-label-md">দ্রুত লিঙ্ক</h6>
+<div class="flex flex-col space-y-2">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:underline decoration-primary underline-offset-4 font-label-md" href="#">Farmer Stories</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:underline decoration-primary underline-offset-4 font-label-md" href="#">Recipes</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:underline decoration-primary underline-offset-4 font-label-md" href="#">Certifications</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:underline decoration-primary underline-offset-4 font-label-md" href="#">Sustainability</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:underline decoration-primary underline-offset-4 font-label-md" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<h6 class="font-bold text-primary font-label-md">নিউজলেটার</h6>
+<p class="text-on-surface-variant text-label-md">নতুন পণ্যের আপডেট এবং স্পেশাল অফার পেতে যোগ দিন।</p>
+<div class="flex">
+<input class="bg-surface border-none rounded-l-xl px-4 py-3 w-full focus:ring-2 focus:ring-primary" placeholder="আপনার ইমেইল" type="email"/>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-r-xl font-bold transition-all active:scale-95">যোগ দিন</button>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto border-t border-outline-variant/10 text-center md:text-left">
+<p class="text-secondary dark:text-secondary-fixed-dim font-label-sm">© 2024 Shobuj Bazar. Harvesting Ethical Elegance in Bangladesh.</p>
+</div>
+</footer>
+<!-- Floating Action Button (FAB) -->
+<button class="fixed bottom-8 right-8 bg-primary text-on-primary w-14 h-14 rounded-full shadow-2xl flex items-center justify-center scale-100 hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined text-[28px]">support_agent</span>
+</button>
+</body></html>

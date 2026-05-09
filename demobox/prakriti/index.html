@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prakriti | Organic Zen Lifestyle</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#1c1c17",
+                      "on-surface": "#1d1b17",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#bacbb9",
+                      "on-error": "#ffffff",
+                      "inverse-on-surface": "#f5f0e8",
+                      "outline-variant": "#c3c8c1",
+                      "surface-container-low": "#f8f3eb",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#536254",
+                      "tertiary": "#52514b",
+                      "primary-fixed": "#d6e7d5",
+                      "on-background": "#1d1b17",
+                      "primary": "#455547",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-highest": "#e7e2da",
+                      "surface-dim": "#ded9d2",
+                      "on-primary-fixed-variant": "#3b4a3d",
+                      "on-secondary": "#ffffff",
+                      "primary-container": "#5d6d5e",
+                      "inverse-surface": "#32302b",
+                      "outline": "#747872",
+                      "tertiary-fixed-dim": "#c9c6bf",
+                      "on-tertiary-fixed-variant": "#474741",
+                      "on-secondary-container": "#783613",
+                      "on-secondary-fixed": "#351000",
+                      "tertiary-fixed": "#e5e2da",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#ffb694",
+                      "surface-variant": "#e7e2da",
+                      "on-surface-variant": "#434843",
+                      "primary-fixed-dim": "#bacbb9",
+                      "secondary-fixed": "#ffdbcc",
+                      "surface": "#fef9f1",
+                      "secondary-container": "#fea276",
+                      "on-tertiary-container": "#ece9e1",
+                      "on-primary-container": "#ddeedb",
+                      "surface-container-high": "#ede7e0",
+                      "tertiary-container": "#6a6963",
+                      "secondary": "#924b26",
+                      "on-secondary-fixed-variant": "#753411",
+                      "background": "#fef9f1",
+                      "on-primary-fixed": "#111f13",
+                      "surface-container": "#f3ede5",
+                      "surface-bright": "#fef9f1",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "headline-xl": ["Playfair Display"],
+                      "label-sm": ["Manrope"],
+                      "body-md": ["Manrope"],
+                      "headline-lg": ["Playfair Display"],
+                      "body-lg": ["Manrope"],
+                      "headline-md": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { background-color: #fef9f1; }
+        .linen-texture {
+            background-image: radial-gradient(#d6e7d5 0.5px, transparent 0.5px), radial-gradient(#d6e7d5 0.5px, #fef9f1 0.5px);
+            background-size: 4px 4px;
+            background-position: 0 0, 2px 2px;
+            opacity: 0.15;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-sm shadow-primary/5">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim italic cursor-pointer transition-transform active:scale-95">Prakriti</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-secondary pb-1 font-body-md transition-colors duration-300 hover:text-secondary" href="#">Organic Food</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-body-md transition-colors duration-300 hover:text-primary" href="#">Herbal</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-body-md transition-colors duration-300 hover:text-primary" href="#">Handmade</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-secondary transition-colors" data-icon="shopping_bag">shopping_bag</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-secondary transition-colors" data-icon="person">person</span>
+</div>
+</div>
+</nav>
+<main class="pt-24 overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center px-margin-mobile md:px-margin-desktop">
+<div class="absolute inset-0 linen-texture -z-10"></div>
+<div class="max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-unit items-center">
+<div class="md:col-span-7 z-10">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] mb-4 block">Consciously Curated</span>
+<h1 class="font-headline-xl text-headline-xl text-primary leading-tight mb-8">Nurturing the <br/><span class="italic text-secondary">Soul of Nature</span> in every home.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">Experience the tranquility of Scandinavian functionalism infused with the warm heritage of Bengal. Our collection is a tribute to slow living and ancestral wisdom.</p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 font-body-md transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 active:scale-95">Explore Collection</button>
+<button class="border border-outline text-primary px-10 py-4 font-body-md hover:bg-surface-container transition-colors">Our Heritage</button>
+</div>
+</div>
+<div class="md:col-span-5 relative mt-12 md:mt-0">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden shadow-2xl shadow-primary/5">
+<img alt="Zen Lifestyle" class="w-full h-full object-cover grayscale-[20%]" data-alt="A tranquil, high-end lifestyle photograph of a minimalist ceramic tea set placed on a rough-hewn wooden table. Soft morning sunlight streams through a sheer linen curtain, creating a play of light and shadow. The scene is dominated by muted sage and cream tones, reflecting an organic zen aesthetic. The atmosphere is quiet, intentional, and deeply serene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNd_TaOH3H_KPDVZ98Wb9UquUI-cQY0yDsyYxIucMKcQMpqwHyVhpAS5EBpK5cXIv7YhobQ79sK4E0u9QPmgo3ab2p9FnLdtkyglGituLNAZjwG7lFzua1FUF_E_TTcrgmrR2552Iq7SzAqvyB3Z1kHMCDzn1zCR89Xz-pOyWwQpieDSb9Abk42ZbxrOAejRQo6z8W5ZlXvmkzPKhO9kUZOEPo4ePQxjP3If_7aP7PRAjPyyKd93P2BXzrQQRmsRKwvoYk_DlKOYo"/>
+</div>
+<!-- Calligraphy Accent -->
+<div class="absolute -bottom-8 -left-8 md:-left-12 opacity-10 select-none pointer-events-none">
+<svg fill="none" height="200" viewbox="0 0 200 200" width="200" xmlns="http://www.w3.org/2000/svg">
+<path d="M40 100C40 100 80 40 120 100C160 160 100 180 80 140C60 100 140 40 160 80" stroke="#455547" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Grid -->
+<section class="py-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Living Naturally</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Three pillars of a conscious home.</p>
+</div>
+<a class="font-label-sm text-label-sm text-secondary hover:underline underline-offset-8" href="#">View All Categories</a>
+</div>
+<a href="/demobox/prakriti/product.html" style="text-decoration: none; color: inherit;">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Food -->
+
+<div class="group cursor-pointer">
+<div class="aspect-[1/1] overflow-hidden bg-surface-container-highest mb-4">
+<img alt="Organic Food" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An overhead shot of fresh, organic ingredients—green leafy vegetables, whole grains in linen bags, and earth-covered tubers—arranged artfully on a light stone surface. The lighting is bright and airy, emphasizing a farm-to-table freshness. Muted earthy greens and beige colors dominate the frame, conveying health and natural abundance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAtbWLN6zmmDxK52MjMyDXTioePKTqgwdrzQ16A6PXGSsSY88nFhdYqrJ15YS1t34y9dgKyDplnli-RYYdnyhiMiyVVbbK_AmMQEXsyleSYJ55DDPOPL2bFkUqvcbY942vs8IUElcBQgwFKMwOe-2M5jJsiAXCiJzRhOtwgaFD5TfimbYlefhLY7orBvLFgVEci3BrZwjZvjOHSQ2sC5h5VQnuidTDtkU3XjaaXChyPErnHHWtR3BgwWxcYIBj8ympyHIxR3xaxEc"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Organic Food</h3>
+</div>
+<!-- Herbal -->
+<div class="group cursor-pointer">
+<div class="aspect-[1/1] overflow-hidden bg-surface-container-highest mb-4">
+<img alt="Herbal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A macro photograph of dried medicinal herbs and flowers—calendula petals, lavender sprigs, and green tulsi leaves—resting in a hand-crafted clay bowl. The lighting is soft and warm, highlighting the textures of the dried botanicals. The color palette is rich with clay orange and deep sage, evoking traditional healing and natural apothecary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDid2lknDXE6sjf3sMaI-23RZgAA6psvyaFoGCulGp7TNfeANhMsIPcAzz_-Jhto3H7BH8XHTafgaNmrO8PUfayai99gcrrW6DP6WHpuggqe9UPBVW7H7hFbeeLNLjHw18qufJVhAHMN5R_VxGlAn76K5JcYRyy3IvGskVHuBop9TXghwunpXQG4R92xoKxusYN8CM7DYjmMu_u0iGewt0xlzgIbbbTFhb-edMaVU1tdmJmtk1qXic2AkUY0lFKA9WsvPlWXOZEWZQ"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Herbal</h3>
+</div>
+<!-- Handmade -->
+<div class="group cursor-pointer">
+<div class="aspect-[1/1] overflow-hidden bg-surface-container-highest mb-4">
+<img alt="Handmade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a pair of skilled hands working with natural jute fibers on a traditional loom. The scene captures the tactile texture of the handmade fabric and the focused artisan's movement. Warm, golden sunlight filters through, emphasizing a sense of heritage and meticulous craftsmanship. Earthy browns and cream tones fill the composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD50UQC2_Q3abgCZbcvDTW8yGoqKH8a32cJxKegc2li6bapU3F-7nz9od9a1sI14Ka53cisv7aj8rq9A6n0G80HKcS7XNTAexTfLKf72rStnGvP45DvxDDlXhqOIpNYnuWyOqa22TxL_OUZ_zzp3FlDh2dqaOGddIEFUPZjgDp4bq2w6LIs7bknsY9cINpJSvttjoWwYFIdXePg8zHfEBad4lJIZ5X0lfas8EKAPTI7UwahqhoJhbPywcRZ4DrimUVB1diu_p48UQM"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Handmade</h3>
+</div>
+
+</div></a>
+</section>
+<!-- Seasonal Collection Banner -->
+<section class="my-margin-desktop bg-primary-container/10 px-margin-mobile md:px-margin-desktop py-24 relative overflow-hidden">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
+<div class="md:w-1/2">
+<span class="inline-block bg-secondary/10 text-secondary px-4 py-1 font-label-sm text-label-sm mb-6 rounded-full">Limited Season</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">The Monsoons of Bengal</h2>
+<p class="font-body-lg text-body-lg text-on-primary-fixed-variant mb-8">Capturing the lush, verdant essence of the rainy season. Explore our collection of monsoon-harvested honey and breathable linen textiles.</p>
+<button class="bg-primary text-on-primary px-10 py-4 font-body-md hover:bg-primary/90 transition-all">Discover the Edit</button>
+</div>
+<div class="md:w-1/2">
+<div class="aspect-video bg-surface-dim overflow-hidden shadow-lg">
+<img alt="Monsoon Collection" class="w-full h-full object-cover" data-alt="A sweeping cinematic view of a lush green landscape under a dramatic monsoon sky. Soft rain falls over a distant forest, creating a misty, atmospheric depth. The color palette is an immersive range of deep forest greens, muted sage, and slate grays. The mood is powerful yet calming, reflecting the untamed beauty of nature during the rains." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg8WrOCl4I7Qx3kqz0EO5RBIvDl_JE3TVfVx71-8HDMH-K_3033R9x2pe8b84Yix_6ENU3T_yBwoMirUb8kJ9fYZrMiQw-1Ua09oj-Az3S3maFBneCRye3zMsoy4i3zE00oRNgTUAdGOQDd8-dOaWc3OYZaqxj8U4uCGibP70Tx9HdsxY8agYzygA7lA94I1SbGdLlbZXdL7BgWlmaAxGP-Q6TJvqH7Mw0pxgc5cAred0jE3bsXfCiWfDCxEdiTL-Au8f3ceQvm9w"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">Daily Rituals</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Essentials for a grounded life.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Product 1 -->
+<div class="flex flex-col md:flex-row gap-8 items-center bg-white p-8 border border-surface-container transition-shadow hover:shadow-xl hover:shadow-primary/5">
+<div class="w-full md:w-1/2 aspect-square bg-surface-container overflow-hidden">
+<img alt="Tulsi Tea" class="w-full h-full object-cover" data-alt="A premium packaging of Tulsi Tea sitting on a minimalist white pedestal. Beside the package is a steaming glass cup of amber tea with fresh green tulsi leaves floating on top. The background is a soft, textured cream wall. The lighting is diffused and elegant, with clay orange accents in the branding. The aesthetic is clean, medical-grade yet organic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1DZcidYdEcDAVR_AVj4s9tLgeXjfhifmL6T9P_Cd7fQ3Gs35DcUnh-wS7vGsHV7BBKMa3V0PFj2rjKH7GJWxMgPGjrQBiSo0eeox8QpQ70vXrwABvP4TF3YqUpHLt2GU6sm6K9hCDei4YbLkGHxGGF84LhOkNKYF18SwhVdbM-lDhDnLXn7AG6lt0U5b41Y6GIVn83uDsyzczPzBdvhSl_PImldx34OV0JxUbx8i9KAT-HUbj9Xtu-RTwwni2FSmNw7eigi26AfQ"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="text-secondary font-label-sm text-label-sm mb-2 block">Ayurvedic Classic</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Tulsi Holy Basil Tea</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Hand-picked leaves from the heart of organic estates in West Bengal.</p>
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-secondary">₹450</span>
+<button class="bg-surface-container-highest p-3 rounded-full hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="flex flex-col md:flex-row gap-8 items-center bg-white p-8 border border-surface-container transition-shadow hover:shadow-xl hover:shadow-primary/5">
+<div class="w-full md:w-1/2 aspect-square bg-surface-container overflow-hidden">
+<img alt="Sundarbans Honey" class="w-full h-full object-cover" data-alt="A clear glass jar filled with golden Sundarbans honey, showing its rich, thick viscosity. The jar has a minimalist label with clay orange typography. It sits on a rough piece of natural wood, with soft-focus trees in the background. The sunlight highlights the clarity and purity of the honey, creating a warm, golden-hour glow across the scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0UDnOxNi5KEyC8TcTTt7kCARQk-al4fqFrmc57N6GmNOj6WsrJLkTD_ICAycGdDdVJfUSYaTsT-uouhGtoS--GhtEPngP6ImrpdUTPYlxsI5VMLYZUClbRkOhlyRKv_JcWxv8n_O8XmLNofeEuMRZSHx4jPZigh_QrkZRIvfGTDa7TgeAaNcaxsOa1458GqYk25CHo6ox_39m2xVlrGytaSjhbE5cm4qWHspISQkT4lBRi2pAt1cd1ZUeM50rmKSmAzleF8369IM"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="text-secondary font-label-sm text-label-sm mb-2 block">Wild Harvest</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Sundarbans Honey</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Raw, unfiltered nectar collected from the world's largest mangrove forest.</p>
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-secondary">₹850</span>
+<button class="bg-surface-container-highest p-3 rounded-full hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainability Timeline -->
+<section class="py-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-16">The Journey of Intention</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+<!-- Connector line hidden on mobile -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-outline-variant -z-10"></div>
+<div class="text-center">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2 text-[20px]">Sourcing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Direct partnerships with 50+ local organic farmers.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-white text-primary border border-primary rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2 text-[20px]">Crafting</h4>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Preserving traditional Bengali weaving techniques.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-white text-primary border border-primary rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2 text-[20px]">Packaging</h4>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">100% plastic-free, biodegradable materials.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-white text-primary border border-primary rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined" data-icon="cycle">cycle</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2 text-[20px]">Renewal</h4>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Supporting carbon-offset forestation programs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Subscription Section -->
+<section class="py-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-surface-dim p-12 md:p-24 flex flex-col md:flex-row items-center gap-16 border-l-8 border-secondary">
+<div class="md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 leading-tight">The Earth's Bounty, <br/>Delivered Weekly.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Our 'Bagan Box' brings seasonal, pesticide-free vegetables and heritage grains straight from our soil to your kitchen. A subscription to slow health.</p>
+<div class="flex flex-col gap-4 mb-10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Farmer-direct pricing</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Heirloom seeds and local varieties</span>
+</div>
+</div>
+<button class="bg-secondary text-on-secondary px-10 py-4 font-body-md hover:opacity-90 transition-all">Subscribe from ₹2,500/mo</button>
+</div>
+<div class="md:w-1/2 relative">
+<div class="aspect-square bg-white p-4 shadow-2xl rotate-2">
+<img alt="Vegetable Subscription Box" class="w-full h-full object-cover" data-alt="A rustic wooden box overflowing with vibrant, earthy organic produce—purple eggplants, bright green chillies, rough-skinned potatoes, and bundles of fresh spinach. The produce is dusted with a bit of soil, emphasizing its direct-from-the-farm origin. The background is a simple, dark wood texture. The lighting is warm and directional, creating deep, rich shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWdG4R6UywO0WBHxGjfi-YCSczkMBSrMr8x0miZBBCiSlJi5WYc8UK9Bid5LG__j7kslrF91tFLTeJl08podR-5NGd8JA7RrkmZ-SWzFgD9kfyYXuS29rM9PtmhCWNu81XAZzHYsk40BoK2jrRoFmvrquz_DKDK4huYfbdPgfvAUXPcCcITa9yEQXJJ72zVrvgc0gvmqhz16n7Q-SHpms9jrueypMz_dFp42xYXLTT7v7KYJ0MJfMOk9IV902OQydvYlXcC_6L4L4"/>
+</div>
+<div class="absolute -top-4 -right-4 bg-primary text-on-primary p-6 rounded-full font-headline-md text-[24px] shadow-xl">Freshly<br/>Picked</div>
+</div>
+</div>
+</section>
+<!-- Instagram Gallery -->
+<section class="py-margin-desktop">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center">Inspirations from the Wild</h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-center">Follow our journey @prakriti_living</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Nature Walk" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" data-alt="A lifestyle shot of a woman in a simple linen dress walking through a tall field of wild grass at sunset. The golden hour light creates a soft haze and highlights her silhouette. The mood is peaceful, free, and deeply connected to nature. Muted earth tones and warm gold dominate the scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALfA5eYaayvfPTGmmFC5q3LowP13ttDP-Lh4XuokVWdaa7QERJ4W-qUHQXonWAnvBTUyQzquY7jk_DfY0tHiDOFC7KfbzNnWsnyM-ePM4A9qreny49ys96dJ0_w8sOoYbkEI38qL1AhWguPeho-vWOiphtuBN4VhTnB3IgxXOj2NHcwnFEeZi-EdAVHOmtLEyIKpQugeOpBsJSHBYnY4Xg66t2rzhD5XkO7Wwr88pgziz5nhyviCw3FcZXE4F0wsfMpBLtZC62zMM"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Tea Ritual" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" data-alt="Close-up of freshly brewed herbal tea in a clear glass, with steam rising gracefully in the cool morning air. A sprig of dried lavender lies beside the glass on a light linen tablecloth. The aesthetic is clean, minimal, and soothing, with soft white and pale purple highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHwRgQ1X3DcMyrD7F3Vr_R39rMHmlJx3MIc6oYr1f0iu5vSRV0iNg0xe06vr0bPP1h3CuQ_tpe7HDzLEhLcDl-wtWSZEU3Iurr41sk2i1XS-R4cVsvEAY4S14t3ZlSYomYCTFFg-D-zn3o4CGf6UktOPBHNn-8LsnefTnPvYHUSdZwnsz2KlNCw2GQcIvD5jU_YYtY_Jzq4vWrdkY4OTkXJqGfPqTExnRFmUS4NCp6UbtVnFZtDEdLizrjwPSzQphE-AwLqg9S-84"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Forest Bathing" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" data-alt="A dense, moody forest path in the early morning fog. The tall, thin trees disappear into a soft white mist, creating a sense of mystery and quietude. The color palette is composed of deep slate, dark greens, and ethereal grays. The mood is contemplative and grounded." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqPHL9AyOdcEj3UXUHbGAcaKK6_ELGXJJUtmSiWPopoEjYcTHKyxe0elNEK7FKMnlNR79ZpDQtye5WukshovhQkpOTWxS3MRHITbCfBQoTBxZVXqm2xMEvNBEGc3qlwHd7agTO3FY09zC3HUGo_gfrnRWv_E13359ZEn8TC03Z5qE3z699IM6dgjPsl1oyn2oI8Qi0iOvNjhSpMwvLE-yeQnxd1IGv1qNDbVu2BBQmBTRjssy6VyK-U6Xb-T9aRRhJOdg9TSz6Reg"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Pottery" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" data-alt="A minimalist still-life of handmade clay pots in varying organic shapes, arranged on a concrete shelf. The neutral tones of the clay—beige, tan, and soft grey—are the focus. The lighting is sharp and architectural, creating clean shadows that emphasize the pots' handcrafted forms." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRgvqEjI8OqLJ7rRAhe11FQP6uCK0k-ZHvnGUcdiotvKADiVtZwBkw9K1R5hZCVBkJaZPBELEgsBxgeYbJNcm7MUlTCZ_ZFx5Wn_2mB_g_cYxKI6YWRlex3351Gad4nE_BSsPeHZ1emy0ksHMUfUZnq1pBpXDEPEDchAJx9JynCmo1HxLQGqlA2I8ka_ZZIK8ncQJhVO4_MxfSIQSVZRIY_wnQmMv2v8CUbLNAQCfRuVL0JYkfPv89lHD15rDJJsxPijrpGgRcge4"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Spices" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" data-alt="Overhead view of coffee beans being sorted on a dark, rustic surface. A few whole cinnamon sticks and star anise are scattered nearby. The scene is warm and aromatic, with rich brown tones and a sense of old-world spice trading. The lighting is low-key and intimate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE2GUjl5Qb7VNlqcuVfte2fC8SEcUaQu18OvJOs-Ij3QIF_ozyR9GpO3hVS4rUiUjpHZlMDu3JhSM4I2pQL8yv0gdYJHFRfaVI1SkIK1XahEY-quMI9I4OWCuq9ZsvCJqx0eYhInxoGrT5EEHVKJzbKNgWOZ_VMIAsLfOdRds0xZX33qJEvQJlyapw6syneCHaNhuOTR_55jyKMXEzbuKWxEOQx5GMpsvGJi8gKyWAw5SziaxYOv7qa7KVlm-xYauNHks9QqjgPOQ"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Simple Living" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" data-alt="A simple, white porcelain plate with a single piece of dark, artisanal bread. The background is a clean, minimalist kitchen with subtle wooden accents. The lighting is bright and modern, emphasizing simplicity and the quality of basic ingredients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsGRa1h6kCkE5rOAyf-zLdmkRR1eCWBvIUU6gVC-ZsBKYr_DrJKwiMARij8SY83fXqoCOEYG4Bwc955QvIKlUix0rKbP2B0jZfY7TMP_ysELLxZeBq4TPXjPCSw9r5uNeUrdysPqEg1qM8NkRRZOvshLBn2Yy9bCZWRjq_xrKjKYmpoMpcjmsPRGwPDogj4PifA-by5_SybWixhAqpbj59jsJlzHDgS7nVk6AkGEs-aS2TiSbQb_R84Wjo8ayNyp3qSmWMVIALPbg"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-low dark:bg-surface-container-lowest">
+<div class="flex flex-col items-center gap-unit py-margin-desktop px-margin-mobile text-center max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-primary/10 select-none pointer-events-none mb-4 italic">Prakriti</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary/30 underline-offset-4" href="#">Sustainability</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary/30 underline-offset-4" href="#">Heritage</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary/30 underline-offset-4" href="#">Our Story</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary/30 underline-offset-4" href="#">Contact</a>
+</div>
+<!-- Bengali Calligraphy Decorative Element -->
+<div class="text-primary/20 text-[48px] font-serif leading-none mb-8 opacity-40 select-none pointer-events-none">
+                প্রকৃতি
+            </div>
+<div class="border-t border-outline-variant/30 w-full pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Prakriti. Crafted with intention.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary/60 cursor-pointer hover:text-secondary transition-colors" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-primary/60 cursor-pointer hover:text-secondary transition-colors" data-icon="instagram">retweet</span>
+<span class="material-symbols-outlined text-primary/60 cursor-pointer hover:text-secondary transition-colors" data-icon="x">crossword</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

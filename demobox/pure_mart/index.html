@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PureMart | Cultivating Conscious Luxury</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#133725",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#a8d0b6",
+                        "primary-fixed": "#c4ecd1",
+                        "error": "#ffb4ab",
+                        "primary": "#a8d0b6",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-container": "#af8d11",
+                        "on-tertiary": "#283501",
+                        "tertiary-fixed": "#d9eaa3",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-fixed-variant": "#3e4c16",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-low": "#1c1b1b",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#2a4e3a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-fixed-dim": "#bdce89",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-tertiary-container": "#849456",
+                        "secondary": "#e9c349",
+                        "outline-variant": "#414843",
+                        "surface-variant": "#353534",
+                        "on-primary-container": "#70957e",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#3a3939",
+                        "on-secondary": "#3c2f00",
+                        "surface": "#131313",
+                        "secondary-fixed": "#ffe088",
+                        "primary-container": "#062c1b",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#342800",
+                        "on-primary-fixed": "#002112",
+                        "on-tertiary-fixed": "#161f00",
+                        "on-error": "#690005",
+                        "outline": "#8b938c",
+                        "on-surface-variant": "#c1c8c1",
+                        "tertiary-container": "#1f2a00",
+                        "tertiary": "#bdce89",
+                        "surface-container-highest": "#353534",
+                        "background": "#131313",
+                        "on-background": "#e5e2e1",
+                        "surface-tint": "#a8d0b6",
+                        "inverse-primary": "#426651"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "section-gap": "80px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0A;
+            color: #e5e2e1;
+        }
+        .glass-card {
+            background: rgba(6, 44, 27, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(168, 208, 182, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.4), #0A0A0A);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container/80 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-secondary tracking-tighter">PureMart</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary border-b-2 border-secondary pb-1 font-headline-md text-[18px]" href="#">Shop</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline-md text-[18px]" href="#">Provenance</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline-md text-[18px]" href="#">Membership</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline-md text-[18px]" href="#">Legacy</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-secondary font-display-lg text-[16px] border-r border-outline-variant/30 pr-4">
+<span>English</span>
+<span class="opacity-30">|</span>
+<span class="font-bold">বাংলা</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:text-secondary duration-300">language</button>
+<button class="material-symbols-outlined text-primary hover:text-secondary duration-300">shopping_bag</button>
+<button class="material-symbols-outlined text-primary hover:text-secondary duration-300">person</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A cinematic, wide-angle photograph of a lush organic harvest at dawn. Golden sunlight filters through dew-covered heirloom vegetables, showcasing rich textures of deep greens, vibrant purples, and earthy browns. The scene is set in a high-end, minimalist greenhouse with sleek architectural lines, creating a luxury dark-mode aesthetic. The lighting is soft and atmospheric, emphasizing the purity and quiet confidence of the cradle-to-table brand story." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmXVaf31Y4IvO4DsxxNipSC6hZNSshV1CSKDXxeZInZ319MATETEJ4bwj6ew95TeWQyOU39ZUZ3oAvW4mnsKGtiFKQwa4BaoOPDz5F6HCo-oOwBW5E1QSGzzS_36vD7i_EugUboFFPrutMvlAshQtAyvWX1_aBCb_zLT7FeZRc2mhxcyUU2XcECKUPDWvkc6PjawhO1S6y7nkLnRg-XHo9f-H9qoBOrYLZ4v_-o6XqfnzGaYMK_sDVYUw305H3_hPA_0E-FlrVLYh8"/>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="relative z-10 text-center max-w-4xl px-gutter">
+<span class="text-secondary font-label-sm tracking-[0.2em] mb-6 block">ESTABLISHED 2024</span>
+<h1 class="font-display-lg text-[80px] md:text-[120px] leading-none mb-8 tracking-tighter">The Purest <span class="text-primary italic">Provenance.</span></h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">Curating the world's most exceptional organic harvests for the discerning palate. From soil to sanctuary, we redefine luxury nutrition.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-secondary text-on-secondary-fixed px-10 py-4 font-label-sm tracking-widest hover:bg-primary transition-all duration-500 rounded-none">EXPLORE HARVEST</button>
+<button class="border border-secondary text-secondary px-10 py-4 font-label-sm tracking-widest hover:bg-secondary/10 transition-all duration-500 rounded-none">PRIVATE CONCIERGE</button>
+</div>
+</div>
+</section>
+<!-- Premium Imports - Bento Grid -->
+<a href="/demobox/pure_mart/product.html" style="text-decoration: none; color: inherit;">
+<section class="py-section-gap px-gutter max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-display-lg text-headline-lg mb-4">Curated Global Finds</h2>
+<p class="text-on-surface-variant font-body-md">Exclusively sourced imports for the connoisseur.</p>
+</div>
+<a class="text-secondary font-label-sm flex items-center gap-2 group" href="#">
+                VIEW ALL IMPORTS 
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter h-[800px]">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 glass-card relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Close-up artistic shot of premium cold-pressed organic olive oil being poured into a sleek glass vessel. The liquid is a glowing liquid gold color, captured in slow motion with crystalline clarity. The background is a dark forest green with soft-focus bokeh lights, embodying the luxury minimal design system of PureMart." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtS-Tpya7Z0zZP0Jy9YChk_rKVZGyb7TfHIMXjdfGialjMwbyZRxYlc-jObFqoSUDeSrpd5VVKJcS3NZ0AV7xeQQ-H8ludd1EPHRnICbTuJwJITwvR83XNC7iFmX_IkLUmVahUrqDSRCFQws8r_CLtD_bXwOnvyiKIdqcrt25MwNtSRwazdtIQagq1VWaP9DXTtgdseHQJr8yQ-mjcxpB2Iv1jZZlaXRZD_yVTDsmxyOx1aQNTUPNsGR78299Uveqra3HQFsSCbKo_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-[10px] font-bold mb-4 inline-block">SPAIN • EXCLUSIVE</span>
+<h3 class="font-display-lg text-headline-md mb-2">অর্গানিক অলিভ অয়েল</h3>
+<p class="text-on-surface-variant mb-6">Extra Virgin Cold-Pressed, Castillo de Canena Reserva.</p>
+<button class="text-secondary border-b border-secondary pb-1 font-label-sm">ACQUIRE NOW</button>
+</div>
+</div>
+<!-- Tall Feature -->
+<div class="md:row-span-2 glass-card relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated presentation of premium organic almond butter on a artisanal stone plate. The textures are creamy and rich, with whole roasted almonds scattered artistically around. The lighting is low-key and dramatic, highlighting the earthy tones of the butter against a deep black background, consistent with the luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCplp3wbG_UCnmVVYBR5Zbo1smBkMWDQAze68Hk5XEDXqSZjFz_RfGlOQPVTkBPLlyZdJXkJecgdf9VWuc_YQRVzhvqaFSsW4xbgExBymEpyljlu9GV5wA8K4ocDdM6SCCNgufQYKkTLIdQBR-lyEJI28QNmvqjKHSgfUHk-sO90OUYtUzjhqIJyRNJ8TLh0cD1sUyHCu8Hj7zr9qerJSb1VIgJk1-i4FECLr5kGN1rLwrid2GfajUuKE09JtZkcsvPiWRzrza3ThSr"/>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-display-lg text-[24px] mb-2">আমন্ড বাটার</h3>
+<p class="text-on-surface-variant font-body-md mb-4 text-[14px]">Stone-ground artisanal spread.</p>
+<p class="text-secondary font-bold">৳ ৪,৫০০</p>
+</div>
+</div>
+<!-- Two Small Features -->
+<div class="glass-card relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist composition of organic chia seeds in a translucent glass jar. The seeds are captured with sharp focus, showcasing their unique patterns. The overall mood is clean and clinical yet luxurious, set against a backdrop of deep forest green glass with elegant reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfUebqV4RRXkDlFmgiUq4QR_LXKTOXnib4-sfA5pgMG0R01NZdcKWM7H4JXmm_Zb2o8FVuXTntHPfpCAOYdD8U4bpO1o95Qf-AT-LFXMEeOXOkPezHrZmXyGG8T5bWuk8GRJhZom-ZujwOYNrGqnKP7mkcTLcp3J_JzKZwlMyq7kvxB3vHhHmdGs-ISCOBuAWCstczybUO6FHNvQzh6qT1aPL6q2yGpZXxOs4j6icZ4JZ9K0z-2Qe9Cyr8kVWBiJ3L69P-joPTzmQ_"/>
+<div class="absolute bottom-4 left-4">
+<h3 class="font-display-lg text-[20px]">চিয়া সিড</h3>
+</div>
+</div>
+<div class="glass-card relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Artisanal organic pasta ribbons dusted with flour on a dark wood surface. The lighting emphasizes the texture of the grain and the handcrafted quality of the pasta. The color palette is dominated by muted gold and deep charcoal, reflecting the premium boutique feel of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4ri5S7t8DovhQ8s9IZ7TW0qCyGnzJ41tQBClwbaSns-Drc4N1_8jRurwTD9lL4yqr9GqsydlpmeDwCOoSSvH2W_Gok2_Dpu4Dn8hEvH9XYgl2Zz5d8u4Ys-A9RN9BdTywBIiZ-UP2OdKONfqCjwLvDsLKx6p-ebcjvLTH6v3wx_mehLTn-WafEvQQWk9K8aWXkPF3p6FCePsTXZOKES158Tov3yzqJLspVRagHz4NptRFDrFSduxHXh8e0q9kTRCuaezLw-Au25x0"/>
+<div class="absolute bottom-4 left-4">
+<h3 class="font-display-lg text-[20px]">অর্গানিক পাস্তা</h3>
+</div>
+</div>
+</div>
+</section>
+</a>
+<!-- Membership Benefits -->
+<section class="bg-primary-container/30 py-section-gap border-y border-outline-variant/10 relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full"></div>
+<h2 class="font-display-lg text-headline-lg mb-8 leading-tight">The Circle of <br/><span class="italic text-secondary">PureMart.</span></h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-[40px] text-secondary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<div>
+<h4 class="font-display-lg text-[24px] mb-2">Exclusive Sourcing</h4>
+<p class="text-on-surface-variant font-body-md">Early access to limited small-batch harvests from protected agricultural estates worldwide.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-[40px] text-secondary" style="font-variation-settings: 'FILL' 1;">concierge</span>
+<div>
+<h4 class="font-display-lg text-[24px] mb-2">Private Concierge</h4>
+<p class="text-on-surface-variant font-body-md">A dedicated nutrition specialist to curate your weekly pantry based on genomic health profiles.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-[40px] text-secondary" style="font-variation-settings: 'FILL' 1;">eco</span>
+<div>
+<h4 class="font-display-lg text-[24px] mb-2">Ethical Stewardship</h4>
+<p class="text-on-surface-variant font-body-md">Direct transparency reports on every farmer, ensuring your lifestyle nurtures the planet.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="aspect-[4/5] glass-card rounded-none overflow-hidden relative border-secondary/20 border">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000" data-alt="A portrait of a sophisticated personal concierge in a luxury minimalist retail environment. They are holding a wooden crate of pristine, brightly colored organic produce. The setting is high-end and modern, with soft glowing lights and a deep palette of forest green and black. The image radiates professional excellence and high-touch service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZWVHR2rH_-OARJDCqVOTUSDNKWaFY3tI4Zr5DouDvKSB0DisDAJ7gIO__oFXlqqWcV2XqS37bPTjOndIKinmplKrKSUa72pO_Vb5qneqEnNf8CUwyL8momfjbU7r43tfISsPG7zrnP6VBHvUJouIrZdgKps1VFzH2WezIoNqGuJNKzooxFsa8o-pu2v9598Y3AViOlUMVfclwxMq--Yzj_4kCW5UREiIk2Q7GzknWDLhPm-4vY6F2nqR1Hl7Y6QfqFkv7q0u6t9td"/>
+<div class="absolute inset-0 bg-secondary/5 mix-blend-overlay"></div>
+</div>
+<div class="absolute -bottom-10 -right-10 glass-card p-8 max-w-[280px] border border-secondary/30">
+<p class="font-display-lg text-[20px] mb-4">"Membership is not just access; it's a commitment to your legacy."</p>
+<p class="text-secondary font-label-sm">— THE FOUNDER</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Smart Recommendations & Bundles -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto">
+<div class="flex items-center justify-between mb-16">
+<h2 class="font-display-lg text-headline-lg">Smart Harvest Bundles</h2>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline/30 flex items-center justify-center hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline/30 flex items-center justify-center hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Bundle 1 -->
+<div class="glass-card group flex flex-col h-full">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A curated collection of morning-ritual health items including organic honey, chia seeds, and fresh berries. Arranged asymmetrically on a matte black ceramic surface with soft side-lighting that creates long, elegant shadows. The visual style is premium and editorial, emphasizing the boutique nature of the product bundles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkB4V1fQ9HONlAB6REiaDPTjMzk7mG7Bl0zCET7RaMrkdVYtpho98Z6gP4RQxs_7UJVuqWXMx4JvnQCsOSwkMOYHEmWqowf-CjKct-67ObpkIx82Es2WxV2-avBZFffG4VUND34CN9pFdOlXkiJAtFZQxginbSD4ttuMiNt7kmiZ5x43goGaUKvLBxUYDn13mKskEV8wkL5NRA6v7nhDEPLWs5VGQkLS8sSxl_bErZJgzi2yusqISp4zeBMADKvPSaNP2exVIyRqP2"/>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-4 py-2 font-label-sm">POPULAR</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-display-lg text-[24px] mb-4">The Morning Alchemist</h3>
+<p class="text-on-surface-variant font-body-md mb-8 flex-grow">A synergy of Mediterranean honey, chia seeds, and raw almond butter designed for cognitive vitality.</p>
+<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-6">
+<span class="font-headline-md text-primary">৳ ৮,৫০০</span>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-sm rounded-none hover:bg-secondary transition-colors">ADD TO COLLECTION</button>
+</div>
+</div>
+</div>
+<!-- Bundle 2 -->
+<div class="glass-card group flex flex-col h-full">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A vibrant, fresh vegetable bundle featuring kale, heirloom tomatoes, and organic herbs in a minimalist black mesh bag. The shot is high-contrast, making the natural colors of the vegetables pop against a dark, moody background. The image evokes a sense of freshness and uncompromised quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1D_irV_VQXrubEHJxD0Urm2ZrMFHR2dTkDlg_KaL0FrmQoQWYaQeSV3V3eJLEiJ_FOzbao3CxPSpH0PSCOD0Ou3FBbvGQAc-cHlCksX98rWJyS2JdUtDtCc62Pr9sFcrpB6i4ADmULD86CkQ1JW3IDkB3GLwrryYvNkpQjKZTyZDrROyuq4bHPwUpby1dZ1nG2tDNPeZCf7ec7_QxgGal0fa0q1nb1SCqA0V4J9NdFBHG2SESh6KZIwiqm27VGxaBIArULBcIdZW7"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-display-lg text-[24px] mb-4">Vitality Greens Harvest</h3>
+<p class="text-on-surface-variant font-body-md mb-8 flex-grow">Fresh-picked seasonal greens from our local organic partners, delivered within 6 hours of harvest.</p>
+<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-6">
+<span class="font-headline-md text-primary">৳ ৫,২০০</span>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-sm rounded-none hover:bg-secondary transition-colors">ADD TO COLLECTION</button>
+</div>
+</div>
+</div>
+<!-- Bundle 3 -->
+<div class="glass-card group flex flex-col h-full">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A collection of Mediterranean essentials including high-end pasta, cold-pressed olive oil, and organic spices. Presented in a luxury hamper with high-end glass packaging and silk ribbon details. The lighting is warm and inviting, set against the brand's signature dark green and gold color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd1mr__R2aH_ku9HwqQiK-LfaNZkCQmOsMUejxjjD74No7RRVuXyWUXVMxlnVPRvkIZmCjzTmT_KK1JwY67-u2ZWy_nvcBUZJS6crVLe6UMKXtElPlEY7pUB9qH6t_7r6q3Pj46M0GPkDKwv0wXlBQpcf_iy5gcKcL4Ah_cnWSW7PM6xCu6H9YmPyzBPuseTUOGp3S_dYXov0ZGTnQmN1mHFLr4OdIuCbqQ19G3s5bE6RquVj44IS9McWsQEVvocFaH9RyVeFMAEza"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-display-lg text-[24px] mb-4">Mediterranean Legacy</h3>
+<p class="text-on-surface-variant font-body-md mb-8 flex-grow">The foundational trio of our finest Spanish oil, Italian pasta, and organic sun-dried aromatics.</p>
+<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-6">
+<span class="font-headline-md text-primary">৳ ১২,০০০</span>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-sm rounded-none hover:bg-secondary transition-colors">ADD TO COLLECTION</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Culinary Expert Testimonials -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<span class="text-secondary font-label-sm tracking-[0.2em] mb-6 block uppercase">Culinary Perspectives</span>
+<div class="max-w-4xl mx-auto">
+<h2 class="font-display-lg text-headline-lg mb-16 italic">"PureMart is the first curator that understands produce is not a commodity, it is an art form."</h2>
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-6 border-2 border-secondary p-1">
+<img class="w-full h-full object-cover rounded-full" data-alt="A close-up portrait of a renowned Michelin-starred chef in their element. The background is a blurred high-end professional kitchen. The chef is looking directly at the camera with an expression of quiet confidence and passion. The lighting is cinematic, focusing on the textures of their uniform and skin." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4YgrzzvmILdOfdPUHWxwggpBzzlcqxrVb-vcHplPB7P9IX3X8fgNQwj_nTS-lhjpclEaJubId-XgmOPWXwiHlRejEVXLTEe8mQRHT5eF78o21vplPr8Y0sD9ZFzSiY4U73yaee2IICFXv7OLrD95xl0YI-mhVWGxvcF7pydhXh21J3ehvQjjHIuGDHZOJnARMN8lbSMESNjRrmaRXGWcRjlcAvGKXlebCUbryRhqS2rCXrDWI1xOk43kPYDDJsF2qmS8gYF_cTQxn"/>
+</div>
+<h5 class="font-display-lg text-[20px]">Chef Elena Riaz</h5>
+<p class="text-on-surface-variant font-label-sm tracking-widest mt-1">MICHELIN STAR RECIPIENT</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full pt-section-gap pb-8 border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto mb-20">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-lg text-headline-lg text-primary mb-6">PureMart</div>
+<p class="text-on-surface-variant font-body-md max-w-xs">Cultivating conscious luxury through direct-from-origin provenance and obsessive quality control.</p>
+</div>
+<div>
+<h6 class="text-on-surface font-label-sm mb-8 tracking-widest">ECOSYSTEM</h6>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#">Sustainability Report</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#">Ethical Sourcing</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#">Private Concierge</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#">Terms of Harvest</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-on-surface font-label-sm mb-8 tracking-widest">SANCTUARIES</h6>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#">Dhaka Flagship</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#">Sylhet Estate</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#">Madrid Hub</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#">London Private Salon</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-on-surface font-label-sm mb-8 tracking-widest">CULTIVATE</h6>
+<p class="text-on-surface-variant font-body-md mb-6">Join our mailing list for exclusive harvest notifications.</p>
+<div class="flex border-b border-outline-variant/50 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-on-surface font-body-md flex-grow" placeholder="Your email address" type="email"/>
+<button class="material-symbols-outlined text-secondary">arrow_right_alt</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/10 opacity-80 hover:opacity-100 transition-opacity">
+<p class="text-tertiary font-body-md text-center md:text-left mb-4 md:mb-0">© 2024 PureMart. Cultivating Conscious Luxury.</p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">linked_camera</span></a>
+</div>
+</div>
+</footer>
+</body></html>
