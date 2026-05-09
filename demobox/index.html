@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemoBox | Mahafuzur Rahman</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00C853',
+                        secondary: '#84CC16',
+                        dark: '#0A0F1A',
+                        gunmetal: '#1A1F2E',
+                        steel: '#2D3748',
+                        light: '#F5F5F5'
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #00C853 0%, #84CC16 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-6px); }
+        .iframe-wrap {
+            position: relative;
+            width: 100%;
+            /* height = 1280 * scale * (9/16) — matches 16:9 at desktop width */
+            height: 0;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            background: #1A1F2E;
+        }
+        .iframe-wrap iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1280px;
+            height: 720px;
+            border: none;
+            pointer-events: none;
+            transform-origin: top left;
+        }
+    </style>
+</head>
+<body class="font-sans bg-dark text-light min-h-screen">
+
+    <!-- Nav -->
+    <nav class="fixed w-full bg-gunmetal/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="/" class="text-xl font-bold gradient-text">Mahafuzur</a>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="flex items-center text-sm text-gray-400 hover:text-primary transition">
+                        <i data-feather="arrow-left" class="w-4 h-4 mr-1"></i> Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-28 pb-12 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Demo <span class="gradient-text">Box</span></h1>
+        <p class="text-gray-400 max-w-xl mx-auto">A collection of UI demos, landing pages, and mini-projects built for practice and exploration.</p>
+        <div class="w-20 h-1 bg-primary mx-auto mt-6"></div>
+    </section>
+
+    <!-- Demo Grid -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Demo: Shobuj Bazar -->
+            <a href="/demobox/shobuj_bazar/" class="card-hover block bg-gunmetal rounded-2xl overflow-hidden border border-steel hover:border-primary/50 shadow-md">
+                <div class="iframe-wrap">
+                    <iframe src="/demobox/shobuj_bazar/" scrolling="no" tabindex="-1" id="iframe-shobuj"></iframe>
+                </div>
+                <div class="p-5">
+                    <h2 class="text-lg font-semibold text-white mb-1">Shobuj Bazar</h2>
+                    <p class="text-sm text-gray-400 mb-4">Premium organic marketplace landing page with Bengali UI, product grid, and farmer stories.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs bg-steel text-gray-300 rounded-full">Tailwind CSS</span>
+                        <span class="px-2 py-1 text-xs bg-steel text-gray-300 rounded-full">HTML</span>
+                    </div>
+                    <span class="inline-flex items-center text-primary text-sm font-medium hover:text-secondary">
+                        View Demo <i data-feather="external-link" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </div>
+            </a> 
+            <!-- Demo: Prakriti -->
+            <a href="/demobox/prakriti/" class="card-hover block bg-gunmetal rounded-2xl overflow-hidden border border-steel hover:border-primary/50 shadow-md">
+                <div class="iframe-wrap">
+                    <iframe src="/demobox/prakriti/" scrolling="no" tabindex="-1" id="iframe-shobuj"></iframe>
+                </div>
+                <div class="p-5">
+                    <h2 class="text-lg font-semibold text-white mb-1">Prakriti</h2>
+                    <p class="text-sm text-gray-400 mb-4">Premium organic food brand focused on healthy eating.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs bg-steel text-gray-300 rounded-full">Tailwind CSS</span>
+                        <span class="px-2 py-1 text-xs bg-steel text-gray-300 rounded-full">HTML</span>
+                    </div>
+                    <span class="inline-flex items-center text-primary text-sm font-medium hover:text-secondary">
+                        View Demo <i data-feather="external-link" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </div>
+            </a> 
+            <!-- Demo: PureMart -->
+            <a href="/demobox/pure_mart/" class="card-hover block bg-gunmetal rounded-2xl overflow-hidden border border-steel hover:border-primary/50 shadow-md">
+                <div class="iframe-wrap">
+                    <iframe src="/demobox/pure_mart/" scrolling="no" tabindex="-1" id="iframe-shobuj"></iframe>
+                </div>
+                <div class="p-5">
+                    <h2 class="text-lg font-semibold text-white mb-1">PureMart</h2>
+                    <p class="text-sm text-gray-400 mb-4">Premium organic food brand focused on luxury items and experience.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs bg-steel text-gray-300 rounded-full">Tailwind CSS</span>
+                        <span class="px-2 py-1 text-xs bg-steel text-gray-300 rounded-full">HTML</span>
+                    </div>
+                    <span class="inline-flex items-center text-primary text-sm font-medium hover:text-secondary">
+                        View Demo <i data-feather="external-link" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Placeholder card — add more demos here -->
+            <div class="card-hover bg-gunmetal rounded-2xl overflow-hidden border border-dashed border-steel flex flex-col items-center justify-center p-10 text-center min-h-[280px]">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <i data-feather="plus" class="text-primary"></i>
+                </div>
+                <p class="text-gray-500 text-sm">More demos coming soon...</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-steel py-6 text-center text-gray-500 text-sm">
+        © 2025 Mahafuzur Rahman · <a href="/" class="hover:text-primary transition">mahafuzur.me</a>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        function scaleIframes() {
+            document.querySelectorAll('.iframe-wrap').forEach(wrap => {
+                const iframe = wrap.querySelector('iframe');
+                if (!iframe) return;
+                const scale = wrap.offsetWidth / 1280;
+                iframe.style.transform = 'scale(' + scale + ')';
+            });
+        }
+
+        scaleIframes();
+        window.addEventListener('resize', scaleIframes);
+    </script>
+</body>
+</html>

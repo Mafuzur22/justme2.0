@@ -36,6 +36,8 @@
     <script>
     lucide.createIcons();
     </script>
+   
+
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -91,6 +93,30 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        .carousel{
+            display: flex;
+            overflow-x: auto;
+        }
+        .carousel::-webkit-scrollbar{
+            display: none;
+        }
+        .project-slider {
+            display: flex;
+            /* animation: slide 30s linear infinite; */
+
+        }
+        .project-card{
+            flex: 0 0 auto;
+        }
+        .project-slider:hover {
+            animation-play-state: paused;
+            
+
+        }
+        @keyframes slide {
+            from { transform: translate(0); }
+            to { transform: translate(-100%); }
+        }
     </style>
 </head>
 <body class="font-sans bg-white text-dark dark:bg-dark dark:text-light transition-colors duration-300">
@@ -115,6 +141,7 @@
                         <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-light hover:text-primary hover:bg-primary/10">Projects</a>
                         <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-light hover:text-primary hover:bg-primary/10">Skills</a>
                         <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-light hover:text-primary hover:bg-primary/10">Contact</a>
+                        <a href="/demobox" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-light hover:text-primary hover:bg-primary/10">DemoBox</a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -406,115 +433,121 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gunmetal dark:bg-gunmetal">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">My <span class="gradient-text">Projects</span></h2>
-                <div class="w-20 h-1 bg-primary mx-auto"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="projects" class="py-20 bg-gunmetal dark:bg-gunmetal overflow-hidden">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">My <span class="gradient-text">Projects</span></h2>
+            <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="carousel ml-none bg-primary p-8">
+            <div class="project-slider">
                 <!-- Project 1 -->
-                <div class="bg-white dark:bg-dark rounded-xl shadow-md overflow-hidden hover:shadow-xl hover:border hover:border-primary/30 transition duration-300" data-aos="fade-up">
-                    <div class="h-48 overflow-hidden">
-                        <img src="http://static.photos/technology/640x360/1" alt="Project 1" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-primary/20 p-2 rounded-lg mr-3">
-                                <i data-feather="code" class="text-primary"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-light">E-commerce Platform</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            A full-featured e-commerce platform with payment integration, product management, and user authentication.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">React</span>
-                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">Node.js</span>
-                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">MongoDB</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-primary hover:text-secondary flex items-center">
-                                <i data-feather="github" class="mr-1"></i> Code
-                            </a>
-                            <a href="#" class="text-primary hover:text-secondary flex items-center">
-                                <i data-feather="external-link" class="mr-1"></i> Live
-                            </a>
-                        </div>
-                    </div>
+                <div class="project-card flex-shrink-0 w-80 mx-4 bg-white dark:bg-dark rounded-2xl shadow-md overflow-hidden
+                            border border-transparent hover:shadow-xl hover:border-primary/30 transition-all duration-300">
+
+                <!-- Image Container with Inner Margin -->
+                <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-steel p-2 rounded-xl">
+                    <img src="./images/fin_tracker.png" 
+                        alt="E-commerce Platform Project" 
+                        class="w-full h-full object-cover rounded-lg transition-transform duration-500 hover:scale-105">
                 </div>
-                
+
+                <!-- Content -->
+                <div class="p-6 flex flex-col justify-between h-full">
+                    <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-light mb-2">
+                        FinTrackr – Personal Finance Dashboard
+                    </h3>
+
+                    <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-4">
+                        FinTrackr is a modern dark-mode SaaS dashboard UI designed for tracking personal finances, income, expenses, and savings analytics.
+                    </p>
+
+                    <!-- Tech Tags -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-200 dark:bg-steel text-gray-800 dark:text-white rounded-full">
+                        Tailwind CSS
+                        </span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-200 dark:bg-steel text-gray-800 dark:text-white rounded-full">
+                        Recharts
+                        </span> 
+                    </div>
+                    <!-- Links: Code / Live -->
+                    <div class="flex space-x-4">
+                    <a href="https://github.com/Mafuzur22/fin_tracker_mock" class="text-primary hover:text-secondary flex items-center transition-colors duration-300">
+                        <i data-feather="github" class="mr-1"></i> Code
+                    </a>
+                    <a href="https://mafuzur22.github.io/fin_tracker_mock/" class="text-primary hover:text-secondary flex items-center transition-colors duration-300">
+                        <i data-feather="external-link" class="mr-1"></i> Live
+                    </a>
+                    </div>
+                    </div>
+
+                    
+                </div>
+                </div>
+                <!-- Project 1 End-->
+                 
                 <!-- Project 2 -->
-                <div class="bg-white dark:bg-dark rounded-xl shadow-md overflow-hidden hover:shadow-xl hover:border hover:border-primary/30 transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-48 overflow-hidden">
-                        <img src="http://static.photos/technology/640x360/2" alt="Project 2" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-primary/20 p-2 rounded-lg mr-3">
-                                <i data-feather="code" class="text-primary"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-light">Task Management App</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            A collaborative task management application with real-time updates, drag-and-drop interface, and team features.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">Vue.js</span>
-                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">Firebase</span>
-                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">Tailwind CSS</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-primary hover:text-secondary flex items-center">
-                                <i data-feather="github" class="mr-1"></i> Code
-                            </a>
-                            <a href="#" class="text-primary hover:text-secondary flex items-center">
-                                <i data-feather="external-link" class="mr-1"></i> Live
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="bg-white dark:bg-dark rounded-xl shadow-md overflow-hidden hover:shadow-xl hover:border hover:border-primary/30 transition duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-48 overflow-hidden">
-                        <img src="http://static.photos/technology/640x360/3" alt="Project 3" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-primary/20 p-2 rounded-lg mr-3">
-                                <i data-feather="code" class="text-primary"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-light">Portfolio Website</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            A responsive portfolio website showcasing projects, skills, and contact information with smooth animations.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">HTML5</span>
-                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">CSS3</span>
-                            <span class="px-3 py-1 bg-gray-200 dark:bg-steel text-gray-800 dark:text-white text-xs rounded-full">JavaScript</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-primary hover:text-secondary flex items-center">
-                                <i data-feather="github" class="mr-1"></i> Code
-                            </a>
-                            <a href="#" class="text-primary hover:text-secondary flex items-center">
-                                <i data-feather="external-link" class="mr-1"></i> Live
-                            </a>
-                        </div>
-                    </div>
+                <div class="project-card flex-shrink-0 w-80 mx-4 bg-white dark:bg-dark rounded-2xl shadow-md overflow-hidden
+                            border border-transparent hover:shadow-xl hover:border-primary/30 transition-all duration-300">
+
+                <!-- Image Container with Inner Margin -->
+                <div class="aspect-video overflow-hidden bg-gray-100 dark:bg-steel p-2 rounded-xl">
+                    <img src="./images/elevate_digital.png" 
+                        alt="E-commerce Platform Project" 
+                        class="w-full h-full object-cover rounded-lg transition-transform duration-500 hover:scale-105">
                 </div>
 
+                <!-- Content -->
+                <div class="p-6 flex flex-col justify-between h-full">
+                    <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-light mb-2">
+                        Elevate Digital – Marketing Agency Website
+                    </h3>
+
+                    <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-4">
+                        Elevate Digital is a modern, high-converting agency website built for a fictional digital marketing company specializing in paid ads, SEO, and conversion optimization.
+                    </p>
+
+                    <!-- Tech Tags -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-200 dark:bg-steel text-gray-800 dark:text-white rounded-full">
+                        Tailwind CSS
+                        </span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-200 dark:bg-steel text-gray-800 dark:text-white rounded-full">
+                        Framer Motion
+                        </span> 
+                        
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-200 dark:bg-steel text-gray-800 dark:text-white rounded-full">
+                        Form validation library
+                        </span> 
+                    </div>
+                    <!-- Links: Code / Live -->
+                    <div class="flex space-x-4">
+                    <a href="https://github.com/Mafuzur22/elevate_digital_mock" class="text-primary hover:text-secondary flex items-center transition-colors duration-300">
+                        <i data-feather="github" class="mr-1"></i> Code
+                    </a>
+                    <a href="https://mafuzur22.github.io/elevate_digital_mock/" class="text-primary hover:text-secondary flex items-center transition-colors duration-300">
+                        <i data-feather="external-link" class="mr-1"></i> Live
+                    </a>
+                    </div>
+                    </div>
+
+                    
+                </div>
+                </div>
+                <!-- Project 2 End-->
 
 
-
+              
                 
-            </div>
-            <div class="text-center mt-12" data-aos="fade-up">
-                <a href="#" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition duration-300">
-                    View All Projects <i data-feather="arrow-right" class="ml-2"></i>
-                </a>
+                </div>
+
+                <!-- Duplicate for infinite scroll -->
+                <div class="project-slider">
+                
+                
+            
             </div>
         </div>
     </section>
