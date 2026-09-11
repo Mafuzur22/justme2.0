@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CarePoint Diagnostic &amp; Medical Center</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter & Hind Siliguri -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0F172A',
+              slate: '#1E293B',
+              card: '#FFFFFF',
+              border: '#E2E8F0',
+              cyan: '#0284C7',
+              cyanHover: '#0369A1',
+              emerald: '#0D9488',
+              accent: '#0EA5E9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'Hind Siliguri', 'sans-serif'],
+            bn: ['Hind Siliguri', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', 'Hind Siliguri', sans-serif;
+      background-color: #FFFFFF;
+      color: #1E293B;
+      overflow-x: hidden;
+    }
+    .font-bangla {
+      font-family: 'Hind Siliguri', 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+    /* Subtle clinical shadow effects */
+    .clinical-shadow {
+      box-shadow: 0 10px 30px -5px rgba(2, 132, 199, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    }
+    .clinical-card-shadow {
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    }
+    .glow-cyan {
+      box-shadow: 0 8px 24px -4px rgba(14, 165, 233, 0.18);
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0284C7;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+<!-- 1. Top Announcement / Emergency Bar -->
+<div class="bg-gradient-to-r from-red-50 via-sky-50/70 to-emerald-50 border-b border-slate-200/80 text-xs py-2 px-4 md:px-8 relative z-50">
+<div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+<!-- Left side: Emergency -->
+<div class="flex items-center space-x-3 text-red-700">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
+</span>
+<div class="flex items-center space-x-1.5 font-medium tracking-wide">
+<i class="w-3.5 h-3.5 text-red-600" data-lucide="phone-call"></i>
+<span class="font-bangla font-bold text-slate-900">জরুরি সেবা ও অ্যাম্বুলেন্স (24/7 Emergency):</span>
+<a class="text-red-700 font-bold tracking-wider hover:underline ml-1" href="tel:+8801712000000">+880 1712-345678</a>
+</div>
+</div>
+<!-- Right side: Quick Links -->
+<div class="flex items-center space-x-5 text-slate-600">
+<a class="flex items-center space-x-1.5 hover:text-sky-700 transition-colors font-bangla" href="#report-portal">
+<i class="w-3.5 h-3.5 text-sky-600" data-lucide="file-text"></i>
+<span class="font-semibold text-sky-700">Online Report</span>
+<span class="text-slate-500 text-[11px]">(অনলাইন রিপোর্ট)</span>
+</a>
+<span class="text-slate-300">|</span>
+<a class="flex items-center space-x-1.5 hover:text-emerald-700 transition-colors font-bangla" href="#doctors">
+<i class="w-3.5 h-3.5 text-emerald-600" data-lucide="stethoscope"></i>
+<span class="font-semibold text-slate-700">ডাক্তার খুঁজুন</span>
+<span class="text-slate-500 text-[11px]">(Find Doctor)</span>
+</a>
+<span class="text-slate-300">|</span>
+<div class="flex items-center space-x-1 text-slate-500 text-[11px]">
+<i class="w-3.5 h-3.5 text-slate-400" data-lucide="map-pin"></i>
+<span>Barishal Sadar, Barishal</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Main Navigation Header -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all">
+<div class="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+<!-- Logo -->
+<a class="flex items-center space-x-3 group" href="#">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-sky-600 to-teal-500 p-0.5 shadow-md shadow-sky-500/20 group-hover:shadow-sky-500/40 transition">
+<div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
+<i class="w-6 h-6 text-sky-600" data-lucide="activity"></i>
+</div>
+</div>
+<div>
+<div class="text-xl font-bold tracking-tight text-slate-900 flex items-center gap-1.5">
+            CarePoint
+            <span class="text-xs px-2 py-0.5 rounded-full bg-sky-100 text-sky-700 border border-sky-200 font-semibold font-mono">24/7</span>
+</div>
+<div class="text-[11px] text-slate-500 tracking-wider uppercase font-medium">Diagnostic &amp; Medical Center</div>
+</div>
+</a>
+<!-- Nav Links -->
+<nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+<a class="text-sky-600 font-bold flex items-center gap-1" href="#">Home</a>
+<a class="hover:text-sky-600 transition-colors flex items-center gap-1 font-bangla" href="#services">
+          Services <span class="text-xs text-slate-400 font-normal">(সেবাসমূহ)</span>
+</a>
+<a class="hover:text-sky-600 transition-colors flex items-center gap-1 font-bangla" href="#doctors">
+          Doctors <span class="text-xs text-slate-400 font-normal">(ডাক্তারগণ)</span>
+</a>
+<a class="hover:text-sky-600 transition-colors flex items-center gap-1 font-bangla" href="#journey">
+          How It Works <span class="text-xs text-slate-400 font-normal">(প্রক্রিয়া)</span>
+</a>
+<a class="hover:text-sky-600 transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- Right CTAs -->
+<div class="flex items-center space-x-4">
+<!-- Live Download Report Quick Button -->
+<button class="hidden md:inline-flex items-center space-x-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg border border-slate-200 transition" onclick="document.getElementById('report-modal').classList.remove('hidden')">
+<i class="w-3.5 h-3.5 text-sky-600" data-lucide="download"></i>
+<span>PDF রিপোর্ট</span>
+</button>
+<!-- Main Booking CTA -->
+<a class="inline-flex items-center space-x-2 bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white font-bold px-5 py-2.5 rounded-xl shadow-md shadow-sky-500/25 hover:shadow-sky-500/35 hover:-translate-y-0.5 transition-all text-sm" href="#booking">
+<i class="w-4 h-4 text-white" data-lucide="calendar-plus"></i>
+<span class="font-bangla">Book Appointment | সিরিয়াল দিন</span>
+</a>
+</div>
+</div>
+</header>
+<!-- 3. Hero Section (Luminous & Crisp Clinical Theme) -->
+<section class="relative pt-8 pb-20 overflow-hidden bg-gradient-to-b from-white via-sky-50/40 to-slate-50">
+<!-- Soft luminous clinical background gradients -->
+<div class="absolute top-0 left-1/4 w-[600px] h-[500px] bg-sky-200/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-20 right-10 w-[550px] h-[450px] bg-teal-100/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[850px] h-[350px] bg-blue-100/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<!-- Top Location & 24/7 Status Header Badge -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-8 pb-3 border-b border-slate-200">
+<div class="inline-flex items-center space-x-2.5 bg-white border border-sky-200/80 px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-700 shadow-sm">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-sky-500"></span>
+</span>
+<i class="w-3.5 h-3.5 text-sky-600" data-lucide="map-pin"></i>
+<span class="font-sans font-bold text-slate-900">Barishal Sadar, Barishal</span>
+<span class="text-slate-300">|</span>
+<span class="font-bangla font-semibold text-sky-700">বরিশাল সদর (শের-ই-বাংলা মেডিকেল সংলগ্ন)</span>
+</div>
+<div class="flex items-center space-x-2 text-xs text-slate-500">
+<span class="px-2.5 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-800 font-mono font-semibold flex items-center gap-1.5">
+<i class="w-3.5 h-3.5 text-emerald-600" data-lucide="shield-check"></i> ISO 15189 Certified Diagnostic Lab
+        </span>
+</div>
+</div>
+<!-- Main Grid: Left Typography & Actions, Right Multi-Image Composition -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left Content Column (5 cols) -->
+<div class="lg:col-span-5 space-y-6 text-center lg:text-left">
+<!-- Badge -->
+<div class="inline-flex items-center space-x-2 bg-sky-50 border border-sky-200 px-3.5 py-1.5 rounded-full text-xs font-bold text-sky-800 shadow-xs">
+<i class="w-3.5 h-3.5 text-sky-600" data-lucide="sparkles"></i>
+<span>Advanced Diagnostic &amp; Consultation Center</span>
+</div>
+<!-- Bilingual Headline -->
+<div class="space-y-3">
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight font-sans">
+            PRECISION DIAGNOSTICS &amp; <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-cyan-600 to-teal-600">
+              COMPASSIONATE HEALTHCARE
+            </span>
+</h1>
+<p class="text-xl sm:text-2xl font-bold text-slate-800 font-bangla tracking-wide">
+            আধুনিক রোগ নির্ণয় এবং উন্নত চিকিৎসাসেবা।
+          </p>
+</div>
+<!-- Bilingual Subheadline -->
+<div class="space-y-1.5 text-slate-600 text-sm sm:text-base leading-relaxed">
+<p class="font-sans text-slate-600 font-medium">
+            Discover state-of-the-art medical technology and expert consultation.
+          </p>
+<p class="font-bangla text-slate-700 font-medium">
+            নিখুঁত রিপোর্ট ও সঠিক পরামর্শের নিশ্চয়তা — এক ছাদের নিচে দক্ষিণবঙ্গের নির্ভরযোগ্য স্বাস্থ্যসেবা।
+          </p>
+</div>
+<!-- Interactive Call To Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+<a class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-sky-600 hover:bg-sky-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-sky-600/20 hover:shadow-sky-500/30 hover:-translate-y-0.5 transition-all text-sm group" href="#booking">
+<i class="w-4 h-4 text-white" data-lucide="calendar-check"></i>
+<span class="font-bangla font-bold">Book Appointment | সিরিয়াল দিন</span>
+<i class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" data-lucide="arrow-right"></i>
+</a>
+<button class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white hover:bg-slate-50 text-slate-800 font-bold px-5 py-3.5 rounded-xl border border-emerald-300 hover:border-emerald-400 transition text-sm group shadow-sm" onclick="document.getElementById('report-modal').classList.remove('hidden')">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<i class="w-4 h-4 text-emerald-600" data-lucide="file-down"></i>
+<span class="font-bangla text-xs sm:text-sm text-emerald-800 group-hover:text-emerald-900">অনলাইন রিপোর্ট ডাউনলোড / Get PDF Report</span>
+</button>
+</div>
+<!-- Floating Trust Pills Row -->
+<div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5 border-t border-slate-200">
+<div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 shrink-0">
+<i class="w-4 h-4" data-lucide="file-check-2"></i>
+</div>
+<div class="text-left">
+<div class="text-xs font-bold text-slate-900 leading-tight">Automated PDF via SMS</div>
+<div class="text-[11px] text-slate-500 font-bangla font-medium">ডিজিটাল পিডিএফ রিপোর্ট</div>
+</div>
+</div>
+<div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shrink-0">
+<i class="w-4 h-4" data-lucide="credit-card"></i>
+</div>
+<div class="text-left">
+<div class="text-xs font-bold text-slate-900 leading-tight">bKash, Nagad &amp; Card</div>
+<div class="text-[11px] text-slate-500 font-bangla font-medium">তাৎক্ষণিক ক্যাশলেস পেমেন্ট</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Dynamic Multi-Image Composed Artwork Field (7 cols) -->
+<div class="lg:col-span-7 relative">
+<!-- Outer crisp white framing canvas -->
+<div class="relative rounded-3xl bg-white/90 border border-slate-200 p-3 sm:p-4 backdrop-blur-md shadow-xl">
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-3.5">
+<!-- 1. Left / Dominant Portrait: Female Doctor holding tablet (col-span-5) -->
+<div class="sm:col-span-5 relative group rounded-2xl overflow-hidden border border-sky-200 bg-slate-100 shadow-md flex flex-col justify-end min-h-[360px] sm:min-h-[460px]">
+<img alt="CarePoint Chief Medical Officer holding medical tablet in diagnostic center" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VFU2F5tZ6mDgv_jaIYyjr-jnHr_xj9V2lQTVbgdFY285o16nMzT7iPtcHSs0QmG-jL1VeWwEK78I8hMWhP7dZ2UOrCjaEE9aTNjYXFcXODaV1FGTUB0d4iTjTN354oDnDuPqr4xWtYwF4HdsPIswsrRt7E7CQqI0nN5xM2nU_ARecYi1kBIrraeyAadx36U4t-YpjQnEVxI8Roh3wQTYQppflLNew4FeBjZ8m_BuGnJ025Xo7Ua0r628-S"/>
+<!-- Subtle Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/10 to-transparent"></div>
+<!-- Top Status Pill -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="px-2.5 py-1 rounded-full bg-white/95 text-sky-800 border border-sky-200 text-[10px] font-mono font-bold backdrop-blur-md flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> On Duty
+                </span>
+</div>
+<!-- Doctor Bottom Label -->
+<div class="relative z-10 p-3.5 bg-white/95 border-t border-slate-200 backdrop-blur-md">
+<div class="text-xs font-bold text-slate-900 flex items-center justify-between">
+<span>Dr. Priya Sharma</span>
+<span class="text-[10px] font-mono bg-sky-50 text-sky-700 px-1.5 py-0.5 rounded border border-sky-200 font-bangla font-semibold">কনসালটেন্ট</span>
+</div>
+<div class="text-[11px] text-sky-800 font-semibold mt-0.5 font-bangla">
+                  Chief Medical Officer / সিনিয়র কনসালটেন্ট
+                </div>
+</div>
+</div>
+<!-- Right Subgrid: 3 Photos (col-span-7) -->
+<div class="sm:col-span-7 flex flex-col gap-3.5">
+<!-- Top Split Row: MRI Scanner & Lab Tech -->
+<div class="grid grid-cols-2 gap-3.5">
+<!-- 2. Top Right 1: Advanced Glowing Cyan MRI Scanner -->
+<div class="relative group rounded-2xl overflow-hidden border border-sky-200 bg-slate-100 shadow-sm min-h-[145px] sm:min-h-[165px]">
+<img alt="Advanced glowing cyan MRI scanner in high-tech diagnostic suite" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Ubg96jEujJF7uU0Q4mAzm_kkcrjCCjfdiMp_PPmGv4US6DOT9v2TGSqERSVa6-3Lo-jUcYpZBCStM28io-Ot4cbbxOEuHc-vRuHsWwbzNd-ZR1AScfiLZg9TFpUhAvzpVQBSfZiuAwhJKKS3GkMxHH5Y_HU-JQj1uwODiCiUmtyOtktJiLFgGHBGKiRdTVIosmEEPy10efQ1JlqveJTmzP3UgGC3zCX3RwvgweDlOTt9sbFd2oZPD9I36K"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+<!-- Badge -->
+<div class="absolute bottom-2 left-2 right-2">
+<span class="inline-block w-full text-center px-2 py-1 rounded-lg bg-white/95 text-slate-900 border border-slate-200 text-[10px] font-bold backdrop-blur-md shadow-sm">
+                      1.5T Silent MRI Suite
+                    </span>
+</div>
+</div>
+<!-- 3. Top Right 2: Lab Technician with Microscope -->
+<div class="relative group rounded-2xl overflow-hidden border border-teal-200 bg-slate-100 shadow-sm min-h-[145px] sm:min-h-[165px]">
+<img alt="Medical lab technician examining samples under high-powered laboratory microscope" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1WA0QtZB4QpCY3tktYrg1mIlMje8XBnJl0OuulgdGefl3yhBw64OD_r8D0jyNiyzqwNvklnG7TnziLfoJsVCED7K7HnQN9WrHjbe5S-pGk6593nS4m35-wxKjqyw6lIeYSXNjJLLOiuGTskBJa0LYU_fOQsQZsLpVpQaiO8JZd2qcbjYovpOvQ5v2UJ9Hg23PHlmpeAGuASKVppZUbdl1RfyQK4h0G7Qv3xKWZdiszqvmhaYayWnNHTueLs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+<!-- Badge -->
+<div class="absolute bottom-2 left-2 right-2">
+<span class="inline-block w-full text-center px-2 py-1 rounded-lg bg-white/95 text-teal-800 border border-teal-200 text-[10px] font-bold backdrop-blur-md shadow-sm">
+                      Automated Pathology Lab
+                    </span>
+</div>
+</div>
+</div>
+<!-- 4. Bottom Right: Healthcare Team Wide Landscape -->
+<div class="relative group rounded-2xl overflow-hidden border border-sky-200 bg-slate-100 shadow-sm min-h-[180px] sm:min-h-[220px] flex-1 flex flex-col justify-end">
+<img alt="Diverse smiling South Asian healthcare team in hospital lobby" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0oFbNlF2rxtld99hMnLl7svBfHiDVt5Ys1GG0RWkBD8zY9g7JMH_Yz5GoO-MwS90foOnAlMl13O2nGj-Z2me1qnrBJN1XJ9_Adj9dqnc0_H6qcuIZWp0eS8YEDZgIfa0RgWTUe5Gn62Hm5owZOOTE78ZcJBg5b_pfABNw4JeXlBk2jnhn4ZELSkqinEyVdFIqzalowpLLMdoyJMnG7lZOWLDJ2Ix0Nh0Avh-SDxqsuJnO2VS2inZq-cv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent"></div>
+<!-- Team Badge & Info Bar -->
+<div class="relative z-10 p-3 bg-white/95 border-t border-slate-200 backdrop-blur-md flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-xs font-bold text-slate-900">50+ Specialist Consultants</span>
+</div>
+<span class="text-[11px] font-bangla text-sky-800 font-bold bg-sky-50 px-2 py-0.5 rounded border border-sky-200">
+                    অভিজ্ঞ বিশেষজ্ঞ প্যানেল
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Accent Guarantee Badge on Artwork Corner -->
+<div class="hidden sm:flex absolute -bottom-3 -right-3 bg-white border border-sky-300 rounded-xl px-3 py-2 shadow-lg items-center space-x-2.5 backdrop-blur-md">
+<div class="w-7 h-7 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center">
+<i class="w-4 h-4" data-lucide="check-circle-2"></i>
+</div>
+<div class="text-left text-[11px]">
+<div class="font-bold text-slate-900">100% Accurate &amp; Verified</div>
+<div class="text-slate-500 font-bangla font-medium">অভিজ্ঞ কনসালট্যান্ট কর্তৃক প্রত্যয়িত</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Fast-Track Appointment Booking Bar (Interactive Form) -->
+<section class="relative z-30 -mt-10 px-4 md:px-8" id="booking">
+<div class="max-w-7xl mx-auto">
+<div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xl clinical-shadow">
+<div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+<div class="flex items-center space-x-2">
+<div class="p-1.5 bg-sky-50 rounded-lg text-sky-600 border border-sky-100">
+<i class="w-4 h-4" data-lucide="zap"></i>
+</div>
+<h2 class="text-sm md:text-base font-bold text-slate-900 font-bangla">
+              ফাস্ট-ট্র্যাক অনলাইন সিরিয়াল বুকিং <span class="text-sky-600 font-sans font-semibold text-xs ml-1">(Fast-Track Appointment)</span>
+</h2>
+</div>
+<span class="text-xs text-slate-500 hidden sm:inline-flex items-center gap-1 font-bangla font-medium">
+<i class="w-3.5 h-3.5 text-sky-600" data-lucide="clock"></i> তাৎক্ষণিক কনফার্মেশন SMS পাঠানো হবে
+          </span>
+</div>
+<form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4" id="booking-form" onsubmit="handleBooking(event)">
+<!-- 1. Select Department -->
+<div class="space-y-1.5">
+<label class="block text-xs font-bold text-slate-700 font-bangla">
+              ডিপার্টমেন্ট নির্বাচন করুন <span class="text-slate-400 font-sans text-[11px] font-normal">(Department)</span>
+</label>
+<div class="relative">
+<select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition appearance-none cursor-pointer" id="department-select" onchange="updateDoctorsList()" required="">
+<option value="">-- বিভাগ বেছে নিন --</option>
+<option value="cardiology">Cardiology (হৃদরোগ বিভাগ)</option>
+<option value="neurology">Neurology &amp; Medicine (নিউরোমেডিসিন)</option>
+<option value="gynecology">Gynecology &amp; Obstetrics (স্ত্রী ও প্রসূতিরোগ)</option>
+<option value="orthopedics">Orthopedic Surgery (হাড় ও জোড়া রোগ)</option>
+<option value="pediatrics">Pediatrics &amp; Child Health (শিশু বিভাগ)</option>
+<option value="radiology">Radiology &amp; Imaging (রেডিওলজি)</option>
+</select>
+<i class="w-4 h-4 text-slate-400 absolute right-3 top-3 pointer-events-none" data-lucide="chevron-down"></i>
+</div>
+</div>
+<!-- 2. Select Specialist Doctor -->
+<div class="space-y-1.5">
+<label class="block text-xs font-bold text-slate-700 font-bangla">
+              ডাক্তার নির্বাচন করুন <span class="text-slate-400 font-sans text-[11px] font-normal">(Doctor)</span>
+</label>
+<div class="relative">
+<select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition appearance-none cursor-pointer" id="doctor-select" required="">
+<option value="">-- প্রথমে বিভাগ নির্বাচন করুন --</option>
+<option value="dr-anwar">Prof. Dr. Anwarul Kabir (কার্ডিওলজিস্ট)</option>
+<option value="dr-farhana">Dr. Farhana Yasmin (গাইনী ও প্রসূতি)</option>
+<option value="dr-mahfuz">Dr. Mahfuzur Rahman (নিউরো মেডিসিন)</option>
+<option value="dr-tanvir">Dr. K. M. Tanvir Hasan (অর্থোপেডিক)</option>
+</select>
+<i class="w-4 h-4 text-slate-400 absolute right-3 top-3 pointer-events-none" data-lucide="chevron-down"></i>
+</div>
+</div>
+<!-- 3. Preferred Date -->
+<div class="space-y-1.5">
+<label class="block text-xs font-bold text-slate-700 font-bangla">
+              পছন্দের তারিখ <span class="text-slate-400 font-sans text-[11px] font-normal">(Preferred Date)</span>
+</label>
+<div class="relative">
+<input class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition" id="booking-date" required="" type="date"/>
+</div>
+</div>
+<!-- 4. Patient Phone Number (+880 formatted) -->
+<div class="space-y-1.5">
+<label class="block text-xs font-bold text-slate-700 font-bangla">
+              মোবাইল নাম্বার <span class="text-slate-400 font-sans text-[11px] font-normal">(Phone)</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 text-xs font-mono font-bold text-sky-600 border-r border-slate-200 pr-2">+880</span>
+<input class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-16 pr-3 py-2.5 text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 font-mono transition" id="patient-phone" maxlength="10" pattern="[0-9]{10}" placeholder="1712345678" required="" type="tel"/>
+</div>
+</div>
+<!-- 5. Submit Button -->
+<div class="space-y-1.5 flex flex-col justify-end">
+<label class="hidden lg:block text-xs text-transparent">Action</label>
+<button class="w-full h-[42px] bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white font-bold px-4 rounded-xl shadow-md shadow-sky-600/20 hover:shadow-sky-500/30 transition flex items-center justify-center space-x-1.5 text-xs sm:text-sm font-bangla" type="submit">
+<i class="w-4 h-4" data-lucide="check-check"></i>
+<span>সিরিয়াল কনফার্ম করুন</span>
+</button>
+</div>
+</form>
+<!-- Booking success banner (dynamic) -->
+<div class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs sm:text-sm flex items-center justify-between" id="booking-success">
+<div class="flex items-center space-x-3">
+<div class="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
+<i class="w-4 h-4" data-lucide="check"></i>
+</div>
+<div>
+<div class="font-bold text-slate-900 font-bangla">সিরিয়াল বুকিং সফল হয়েছে! ট্র্যাকিং কোড: <span class="font-mono text-sky-700" id="booking-token">CPD-BK-9912</span></div>
+<div class="text-slate-600 font-bangla text-xs">আপনার দেওয়া +880 নাম্বারে SMS ও ডিজিটাল স্লিপ পাঠানো হয়েছে।</div>
+</div>
+</div>
+<button class="text-slate-500 hover:text-slate-900 text-xs font-semibold" onclick="document.getElementById('booking-success').classList.add('hidden')">বন্ধ করুন</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Core Services Showcase -->
+<section class="py-24 px-4 md:px-8 relative bg-slate-50/50" id="services">
+<div class="max-w-7xl mx-auto">
+<!-- Section Heading -->
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<div class="inline-flex items-center space-x-2 text-sky-700 text-xs font-bold tracking-wider uppercase bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
+<i class="w-3.5 h-3.5" data-lucide="sparkles"></i>
+<span>Modern Clinical Facilities</span>
+</div>
+<h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 font-bangla">
+          আমাদের চিকিৎসাসেবা ও ডায়াগনস্টিক সার্ভিস
+        </h2>
+<p class="text-slate-600 text-sm sm:text-base font-bangla">
+          বিশ্বমানের মেডিকেল ইকুইপমেন্ট, জাপানিজ অটোমেটেড অ্যানালাইজার এবং আন্তর্জাতিক মানের অভিজ্ঞ ল্যাব কনসালট্যান্ট।
+        </p>
+</div>
+<!-- Services Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service 1: Digital Imaging -->
+<div class="group bg-white hover:bg-slate-50/50 rounded-2xl p-6 border border-slate-200 hover:border-sky-300 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-14 h-14 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 group-hover:scale-105 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
+<i class="w-7 h-7" data-lucide="scan"></i>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-900 group-hover:text-sky-700 transition-colors">Digital Imaging</h3>
+<span class="text-[11px] px-2.5 py-0.5 rounded-full bg-slate-100 text-sky-700 font-mono border border-slate-200 font-semibold">MRI / CT / X-Ray</span>
+</div>
+<p class="text-sm text-sky-700 font-bangla font-bold mt-0.5">নির্ভুল ডিজিটাল ইমেজিং ও স্ক্যান</p>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-bangla">
+              1.5 Tesla Ultra-Silent MRI, 128-Slice High Definition CT Scan, 4D কালার ডপলার আল্ট্রাসনোগ্রাফি ও 500mA ডিজিটাল এক্স-রে।
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center space-x-1.5 text-xs text-slate-500 font-medium">
+<i class="w-3.5 h-3.5 text-sky-600" data-lucide="clock"></i>
+<span>ডেলিভারি: <strong class="text-slate-800">৪-৬ ঘণ্টা</strong></span>
+</div>
+<a class="text-xs font-bold text-sky-600 hover:text-sky-800 flex items-center space-x-1 group-hover:translate-x-1 transition font-bangla" href="#booking">
+<span>বিস্তারিত জানুন</span>
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
+<!-- Service 2: Advanced Pathology Lab -->
+<div class="group bg-white hover:bg-slate-50/50 rounded-2xl p-6 border border-slate-200 hover:border-teal-300 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-14 h-14 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-600 group-hover:scale-105 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+<i class="w-7 h-7" data-lucide="microscope"></i>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-900 group-hover:text-teal-700 transition-colors">Advanced Pathology Lab</h3>
+<span class="text-[11px] px-2.5 py-0.5 rounded-full bg-slate-100 text-teal-700 font-mono border border-slate-200 font-semibold">ISO 15189</span>
+</div>
+<p class="text-sm text-teal-700 font-bangla font-bold mt-0.5">আধুনিক বায়োকেমিস্ট্রি ও হিস্টোপ্যাথলজি</p>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-bangla">
+              সম্পূর্ণ অটোমেটেড রোবোটিক স্যাম্পল প্রসেসিং, হরমন এনালাইসিস, টিউমার মার্কার, মাইক্রোবায়োলজি ও হেমাটোলজি টেস্ট।
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center space-x-1.5 text-xs text-slate-500 font-medium">
+<i class="w-3.5 h-3.5 text-teal-600" data-lucide="clock"></i>
+<span>ডেলিভারি: <strong class="text-slate-800">২-৪ ঘণ্টা</strong></span>
+</div>
+<a class="text-xs font-bold text-teal-600 hover:text-teal-800 flex items-center space-x-1 group-hover:translate-x-1 transition font-bangla" href="#booking">
+<span>বিস্তারিত জানুন</span>
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
+<!-- Service 3: Specialist Consultations -->
+<div class="group bg-white hover:bg-slate-50/50 rounded-2xl p-6 border border-slate-200 hover:border-sky-300 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-14 h-14 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 group-hover:scale-105 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
+<i class="w-7 h-7" data-lucide="stethoscope"></i>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-900 group-hover:text-sky-700 transition-colors">Specialist Consultations</h3>
+<span class="text-[11px] px-2.5 py-0.5 rounded-full bg-slate-100 text-sky-700 font-mono border border-slate-200 font-semibold">50+ Consultants</span>
+</div>
+<p class="text-sm text-sky-700 font-bangla font-bold mt-0.5">অভিজ্ঞ বিশেষজ্ঞ ডাক্তার চেম্বার</p>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-bangla">
+              ঢাকা ও বরিশালের স্বনামধন্য মেডিকেল কলেজের প্রফেসর ও কনসালট্যান্টদের নিয়মিত চেম্বার ও ক্লিনিক্যাল পরামর্শ সেবা।
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center space-x-1.5 text-xs text-slate-500 font-medium">
+<i class="w-3.5 h-3.5 text-sky-600" data-lucide="clock"></i>
+<span>সাপ্তাহিক ও প্রতিদিন চেম্বার</span>
+</div>
+<a class="text-xs font-bold text-sky-600 hover:text-sky-800 flex items-center space-x-1 group-hover:translate-x-1 transition font-bangla" href="#doctors">
+<span>ডাক্তার তালিকা</span>
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
+<!-- Service 4: Health Checkup Packages -->
+<div class="group bg-white hover:bg-slate-50/50 rounded-2xl p-6 border border-slate-200 hover:border-purple-300 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-14 h-14 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600 group-hover:scale-105 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300">
+<i class="w-7 h-7" data-lucide="heart-pulse"></i>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-900 group-hover:text-purple-700 transition-colors">Health Checkup Packages</h3>
+<span class="text-[11px] px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 font-mono border border-purple-200 font-bold">২০% ছাড়</span>
+</div>
+<p class="text-sm text-purple-700 font-bangla font-bold mt-0.5">সাশ্রয়ী হেলথ চেকআপ প্যাকেজ</p>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-bangla">
+              হোল বডি হেলথ স্ক্রিনিং, এক্সিকিউটিভ কার্ডিয়াক প্যাকেজ, ডায়াবেটিস প্রফাইল এবং সিনিয়র সিটিজেনদের বিশেষ স্বাস্থ্য পরীক্ষা।
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center space-x-1.5 text-xs text-slate-500 font-medium">
+<i class="w-3.5 h-3.5 text-purple-600" data-lucide="clock"></i>
+<span>সেম ডে রিপোর্ট ডেলিভারি</span>
+</div>
+<a class="text-xs font-bold text-purple-600 hover:text-purple-800 flex items-center space-x-1 group-hover:translate-x-1 transition font-bangla" href="#booking">
+<span>প্যাকেজ দেখুন</span>
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
+<!-- Service 5: Home Sample Collection -->
+<div class="group bg-white hover:bg-slate-50/50 rounded-2xl p-6 border border-slate-200 hover:border-amber-300 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-14 h-14 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-600 group-hover:text-white transition-all duration-300">
+<i class="w-7 h-7" data-lucide="home"></i>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-900 group-hover:text-amber-700 transition-colors">Home Sample Collection</h3>
+<span class="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 font-mono border border-amber-200 font-bold">ডোরস্টেপ</span>
+</div>
+<p class="text-sm text-amber-700 font-bangla font-bold mt-0.5">বাসা থেকে রক্ত ও স্যাম্পল কালেকশন</p>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-bangla">
+              বরিশাল সদর এলাকার যেকোনো প্রান্ত থেকে অভিজ্ঞ টেকনোলজিস্ট দ্বারা বাড়ি গিয়ে রক্ত ও ইউরিন স্যাম্পল গ্রহণ ও দ্রুত রিপোর্ট।
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center space-x-1.5 text-xs text-slate-500 font-medium">
+<i class="w-3.5 h-3.5 text-amber-600" data-lucide="phone"></i>
+<span>কল করুন: <strong class="text-slate-800">+880 1712-345678</strong></span>
+</div>
+<a class="text-xs font-bold text-amber-600 hover:text-amber-800 flex items-center space-x-1 group-hover:translate-x-1 transition font-bangla" href="tel:+8801712345678">
+<span>কল দিন</span>
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
+<!-- Extra Feature Card: Automated Report Portal -->
+<div class="group bg-gradient-to-br from-sky-50 via-white to-sky-100/60 rounded-2xl p-6 border border-sky-300 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-14 h-14 rounded-xl bg-sky-600 border border-sky-600 flex items-center justify-center text-white shadow-sm">
+<i class="w-7 h-7" data-lucide="file-down"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900">Automated PDF Portal</h3>
+<p class="text-sm text-sky-700 font-bangla font-bold mt-0.5">তাৎক্ষণিক অটোমেটেড রিপোর্ট ডাউনলোড</p>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-bangla">
+              সিরিয়াল বা ইনভয়েস আইডি ও মোবাইল নাম্বার দিয়ে সরাসরি হাসপাতালে না এসেও বাসা থেকেই ডাউনলোড করুন সিকিউর ডিজিটাল টেস্ট রেজাল্ট।
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-sky-200">
+<button class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm transition flex items-center justify-center space-x-2 font-bangla shadow-sm" onclick="document.getElementById('report-modal').classList.remove('hidden')">
+<i class="w-4 h-4" data-lucide="search"></i>
+<span>রিপোর্ট পোর্টাল ওপেন করুন</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Featured Specialist Doctors -->
+<section class="py-24 px-4 md:px-8 bg-white border-y border-slate-200/80 relative" id="doctors">
+<div class="max-w-7xl mx-auto">
+<!-- Section Title -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<div class="inline-flex items-center space-x-2 text-sky-700 text-xs font-bold tracking-wider uppercase bg-sky-50 px-3 py-1 rounded-full border border-sky-200 mb-3">
+<i class="w-3.5 h-3.5" data-lucide="users"></i>
+<span>Renowned Medical Board</span>
+</div>
+<h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 font-bangla">
+            Meet Our Senior Consultants | <span class="text-sky-600">আমাদের বিশেষজ্ঞ চিকিৎসকগণ</span>
+</h2>
+<p class="text-slate-600 text-sm sm:text-base font-bangla mt-2">
+            সর্বোচ্চ ডিগ্রিধারী বিশেষজ্ঞ চিকিৎসকদের নিবিড় পর্যবেক্ষণ ও নির্ভরযোগ্য পরামর্শ।
+          </p>
+</div>
+<a class="inline-flex items-center space-x-2 text-xs font-bold text-sky-700 hover:text-sky-900 border border-sky-300 px-4 py-2 rounded-xl bg-sky-50/50 hover:bg-sky-100 transition font-bangla" href="#booking">
+<span>সকল ৫০+ ডাক্তারের তালিকা দেখুন</span>
+<i class="w-4 h-4" data-lucide="arrow-right"></i>
+</a>
+</div>
+<!-- Doctor Profile Cards Grid (4 Doctors) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Doctor 1: Cardiology -->
+<div class="bg-white rounded-2xl border border-slate-200 hover:border-sky-300 transition-all duration-300 overflow-hidden flex flex-col group shadow-sm hover:shadow-md">
+<!-- Doctor Photo Container -->
+<div class="relative h-56 bg-gradient-to-t from-slate-100 to-sky-50/50 overflow-hidden flex items-center justify-center">
+<!-- Simulated Doctor Avatar / Portrait -->
+<div class="w-32 h-32 rounded-full bg-white border-2 border-sky-300 shadow-sm flex items-center justify-center text-sky-600 relative">
+<i class="w-16 h-16 text-slate-400 group-hover:text-sky-600 transition-colors" data-lucide="user"></i>
+<div class="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white" title="Chamber Today"></div>
+</div>
+<span class="absolute top-3 right-3 text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-200 px-2 py-0.5 rounded-full shadow-xs">
+              Cardiology
+            </span>
+</div>
+<!-- Doctor Info -->
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="text-base font-bold text-slate-900 group-hover:text-sky-700 transition-colors">
+                Prof. Dr. Anwarul Kabir
+              </h3>
+<p class="text-xs text-slate-500 font-mono mt-0.5">MBBS, FCPS (Medicine), MD (Cardiology)</p>
+<div class="text-xs font-bold text-sky-700 font-bangla mt-2">
+                সিনিয়র কনসালট্যান্ট ও বিভাগীয় প্রধান
+              </div>
+<p class="text-xs text-slate-500 font-bangla mt-1">জাতীয় হৃদরোগ ইনস্টিটিউট ও হাসপাতাল (সাবেক)</p>
+</div>
+<div class="space-y-3 pt-3 border-t border-slate-100">
+<div class="bg-slate-50 p-2.5 rounded-xl text-xs space-y-1 border border-slate-100">
+<div class="text-slate-500 font-bangla flex items-center gap-1.5 font-medium">
+<i class="w-3.5 h-3.5 text-sky-600" data-lucide="clock"></i>
+<span>রোগী দেখার সময় (Visiting Hours):</span>
+</div>
+<div class="text-slate-800 font-semibold font-bangla pl-5">
+                  শনি - বৃহস্পতি: বিকাল ৪টা - রাত ৯টা
+                </div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-sky-50 hover:bg-sky-600 text-sky-700 hover:text-white font-bold text-xs transition font-bangla flex items-center justify-center space-x-1 border border-sky-200 hover:border-sky-600 shadow-xs" onclick="selectDoctorQuick('dr-anwar', 'Prof. Dr. Anwarul Kabir')">
+<i class="w-3.5 h-3.5" data-lucide="calendar"></i>
+<span>Book Consultation</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Doctor 2: Gynecology -->
+<div class="bg-white rounded-2xl border border-slate-200 hover:border-teal-300 transition-all duration-300 overflow-hidden flex flex-col group shadow-sm hover:shadow-md">
+<div class="relative h-56 bg-gradient-to-t from-slate-100 to-teal-50/50 overflow-hidden flex items-center justify-center">
+<div class="w-32 h-32 rounded-full bg-white border-2 border-teal-300 shadow-sm flex items-center justify-center text-teal-600 relative">
+<i class="w-16 h-16 text-slate-400 group-hover:text-teal-600 transition-colors" data-lucide="user"></i>
+<div class="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white"></div>
+</div>
+<span class="absolute top-3 right-3 text-[10px] font-bold bg-teal-50 text-teal-700 border border-teal-200 px-2 py-0.5 rounded-full shadow-xs">
+              Gynecology
+            </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="text-base font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
+                Dr. Farhana Yasmin
+              </h3>
+<p class="text-xs text-slate-500 font-mono mt-0.5">MBBS, BCS (Health), FCPS, MS (Gynae &amp; Obs)</p>
+<div class="text-xs font-bold text-teal-700 font-bangla mt-2">
+                সহযোগী অধ্যাপিকা (স্ত্রী ও প্রসূতিরোগ)
+              </div>
+<p class="text-xs text-slate-500 font-bangla mt-1">শের-ই-বাংলা মেডিকেল কলেজ হাসপাতাল</p>
+</div>
+<div class="space-y-3 pt-3 border-t border-slate-100">
+<div class="bg-slate-50 p-2.5 rounded-xl text-xs space-y-1 border border-slate-100">
+<div class="text-slate-500 font-bangla flex items-center gap-1.5 font-medium">
+<i class="w-3.5 h-3.5 text-teal-600" data-lucide="clock"></i>
+<span>রোগী দেখার সময় (Visiting Hours):</span>
+</div>
+<div class="text-slate-800 font-semibold font-bangla pl-5">
+                  রবি - বুধ: বিকাল ৫টা - রাত ৮টা
+                </div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-teal-50 hover:bg-teal-600 text-teal-700 hover:text-white font-bold text-xs transition font-bangla flex items-center justify-center space-x-1 border border-teal-200 hover:border-teal-600 shadow-xs" onclick="selectDoctorQuick('dr-farhana', 'Dr. Farhana Yasmin')">
+<i class="w-3.5 h-3.5" data-lucide="calendar"></i>
+<span>Book Consultation</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Doctor 3: Neurology -->
+<div class="bg-white rounded-2xl border border-slate-200 hover:border-sky-300 transition-all duration-300 overflow-hidden flex flex-col group shadow-sm hover:shadow-md">
+<div class="relative h-56 bg-gradient-to-t from-slate-100 to-sky-50/50 overflow-hidden flex items-center justify-center">
+<div class="w-32 h-32 rounded-full bg-white border-2 border-sky-300 shadow-sm flex items-center justify-center text-sky-600 relative">
+<i class="w-16 h-16 text-slate-400 group-hover:text-sky-600 transition-colors" data-lucide="user"></i>
+<div class="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white"></div>
+</div>
+<span class="absolute top-3 right-3 text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-200 px-2 py-0.5 rounded-full shadow-xs">
+              Neurology
+            </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="text-base font-bold text-slate-900 group-hover:text-sky-700 transition-colors">
+                Dr. Mahfuzur Rahman
+              </h3>
+<p class="text-xs text-slate-500 font-mono mt-0.5">MBBS, MD (Neuromedicine), MACP (USA)</p>
+<div class="text-xs font-bold text-sky-700 font-bangla mt-2">
+                ব্রেন ও স্নায়ুরোগ বিশেষজ্ঞ ও সার্জন
+              </div>
+<p class="text-xs text-slate-500 font-bangla mt-1">জাতীয় নিউরোসায়েন্সেস ইনস্টিটিউট</p>
+</div>
+<div class="space-y-3 pt-3 border-t border-slate-100">
+<div class="bg-slate-50 p-2.5 rounded-xl text-xs space-y-1 border border-slate-100">
+<div class="text-slate-500 font-bangla flex items-center gap-1.5 font-medium">
+<i class="w-3.5 h-3.5 text-sky-600" data-lucide="clock"></i>
+<span>রোগী দেখার সময় (Visiting Hours):</span>
+</div>
+<div class="text-slate-800 font-semibold font-bangla pl-5">
+                  বৃহস্পতি ও শুক্র: সকাল ১০টা - বিকাল ৩টা
+                </div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-sky-50 hover:bg-sky-600 text-sky-700 hover:text-white font-bold text-xs transition font-bangla flex items-center justify-center space-x-1 border border-sky-200 hover:border-sky-600 shadow-xs" onclick="selectDoctorQuick('dr-mahfuz', 'Dr. Mahfuzur Rahman')">
+<i class="w-3.5 h-3.5" data-lucide="calendar"></i>
+<span>Book Consultation</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Doctor 4: Orthopedics -->
+<div class="bg-white rounded-2xl border border-slate-200 hover:border-purple-300 transition-all duration-300 overflow-hidden flex flex-col group shadow-sm hover:shadow-md">
+<div class="relative h-56 bg-gradient-to-t from-slate-100 to-purple-50/50 overflow-hidden flex items-center justify-center">
+<div class="w-32 h-32 rounded-full bg-white border-2 border-purple-300 shadow-sm flex items-center justify-center text-purple-600 relative">
+<i class="w-16 h-16 text-slate-400 group-hover:text-purple-600 transition-colors" data-lucide="user"></i>
+<div class="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white"></div>
+</div>
+<span class="absolute top-3 right-3 text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200 px-2 py-0.5 rounded-full shadow-xs">
+              Orthopedics
+            </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="text-base font-bold text-slate-900 group-hover:text-purple-700 transition-colors">
+                Dr. K. M. Tanvir Hasan
+              </h3>
+<p class="text-xs text-slate-500 font-mono mt-0.5">MBBS, D-Ortho, MS (Orthopedic Surgery)</p>
+<div class="text-xs font-bold text-purple-700 font-bangla mt-2">
+                হাড়, জোড়া, ট্রমা ও স্পাইন স্পেশালিস্ট
+              </div>
+<p class="text-xs text-slate-500 font-bangla mt-1">জাতীয় অর্থোপেডিক হাসপাতাল (নিটোর/পঙ্গু হাসপাতাল)</p>
+</div>
+<div class="space-y-3 pt-3 border-t border-slate-100">
+<div class="bg-slate-50 p-2.5 rounded-xl text-xs space-y-1 border border-slate-100">
+<div class="text-slate-500 font-bangla flex items-center gap-1.5 font-medium">
+<i class="w-3.5 h-3.5 text-purple-600" data-lucide="clock"></i>
+<span>রোগী দেখার সময় (Visiting Hours):</span>
+</div>
+<div class="text-slate-800 font-semibold font-bangla pl-5">
+                  সোম - বুধ: সন্ধ্যা ৬টা - রাত ৯:৩০
+                </div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-purple-50 hover:bg-purple-600 text-purple-700 hover:text-white font-bold text-xs transition font-bangla flex items-center justify-center space-x-1 border border-purple-200 hover:border-purple-600 shadow-xs" onclick="selectDoctorQuick('dr-tanvir', 'Dr. K. M. Tanvir Hasan')">
+<i class="w-3.5 h-3.5" data-lucide="calendar"></i>
+<span>Book Consultation</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Patient Journey (How It Works) -->
+<section class="py-24 px-4 md:px-8 relative overflow-hidden bg-slate-50/60" id="journey">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-20 space-y-3">
+<div class="inline-flex items-center space-x-2 text-sky-700 text-xs font-bold tracking-wider uppercase bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
+<i class="w-3.5 h-3.5" data-lucide="route"></i>
+<span>Seamless Medical Experience</span>
+</div>
+<h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 font-bangla">
+          প্যাশেন্ট জার্নি | How It Works
+        </h2>
+<p class="text-slate-600 text-sm sm:text-base font-bangla">
+          সহজ ৪টি ধাপে সম্পন্ন করুন আপনার অ্যাপয়েন্টমেন্ট, ল্যাব টেস্ট এবং রিপোর্ট সংগ্রহ।
+        </p>
+</div>
+<!-- Steps Timeline Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+<!-- Step 1 -->
+<div class="bg-white rounded-2xl p-6 border border-slate-200 relative hover:border-sky-300 transition-all group shadow-sm hover:shadow-md">
+<div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 font-mono font-bold text-lg mb-5 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition">
+            01
+          </div>
+<div class="text-xs font-bold uppercase tracking-wider text-sky-600 mb-1">Step 1</div>
+<h3 class="text-base font-bold text-slate-900 font-bangla">সিরিয়াল দিন</h3>
+<div class="text-xs text-slate-500 font-semibold mb-3">Schedule Online or Walk-In</div>
+<p class="text-xs text-slate-600 leading-relaxed font-bangla">
+            ওয়েবসাইট বা হটলাইনে কল দিয়ে পছন্দের ডাক্তার ও তারিখ অনুযায়ী নিমিষেই অ্যাপয়েন্টমেন্ট বুকিং সম্পন্ন করুন।
+          </p>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center text-[11px] text-sky-700 font-mono font-semibold">
+<i class="w-3 h-3 mr-1 text-sky-600" data-lucide="bell"></i> Instant Confirmation SMS
+          </div>
+</div>
+<!-- Step 2 -->
+<div class="bg-white rounded-2xl p-6 border border-slate-200 relative hover:border-teal-300 transition-all group shadow-sm hover:shadow-md">
+<div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-600 font-mono font-bold text-lg mb-5 shadow-sm group-hover:bg-teal-600 group-hover:text-white transition">
+            02
+          </div>
+<div class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-1">Step 2</div>
+<h3 class="text-base font-bold text-slate-900 font-bangla">পেমেন্ট সম্পন্ন করুন</h3>
+<div class="text-xs text-slate-500 font-semibold mb-3">SSLCommerz, bKash or Nagad</div>
+<p class="text-xs text-slate-600 leading-relaxed font-bangla">
+            ক্যাশলেস নিরাপদ পেমেন্ট করুন bKash, Nagad, Rocket বা ডেবিট/ক্রেডিট কার্ডের মাধ্যমে এবং ডিজিটাল ইনভয়েস পান।
+          </p>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center space-x-2 text-[11px] text-teal-700 font-mono font-semibold">
+<span class="bg-teal-50 px-1.5 py-0.5 rounded border border-teal-200">bKash</span>
+<span class="bg-teal-50 px-1.5 py-0.5 rounded border border-teal-200">Nagad</span>
+<span class="bg-teal-50 px-1.5 py-0.5 rounded border border-teal-200">Cards</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-white rounded-2xl p-6 border border-slate-200 relative hover:border-sky-300 transition-all group shadow-sm hover:shadow-md">
+<div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 font-mono font-bold text-lg mb-5 shadow-sm group-hover:bg-sky-600 group-hover:text-white transition">
+            03
+          </div>
+<div class="text-xs font-bold uppercase tracking-wider text-sky-600 mb-1">Step 3</div>
+<h3 class="text-base font-bold text-slate-900 font-bangla">স্যাম্পল প্রদান করুন</h3>
+<div class="text-xs text-slate-500 font-semibold mb-3">Sample Collection (Center/Home)</div>
+<p class="text-xs text-slate-600 leading-relaxed font-bangla">
+            আমাদের এয়ার-কন্ডিশন্ড লাউঞ্জে অথবা আপনার বাসা থেকেই স্যাম্পল দিন। বারকোডেড টিউবের মাধ্যমে শতভাগ নির্ভুল ট্র্যাকিং।
+          </p>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center text-[11px] text-sky-700 font-mono font-semibold">
+<i class="w-3 h-3 mr-1 text-sky-600" data-lucide="qr-code"></i> Barcode Sample Safety
+          </div>
+</div>
+<!-- Step 4 -->
+<div class="bg-white rounded-2xl p-6 border border-sky-300 relative hover:border-sky-400 transition-all group shadow-md glow-cyan">
+<div class="w-12 h-12 rounded-xl bg-sky-600 text-white font-mono font-bold text-lg mb-5 shadow-md flex items-center justify-center">
+            04
+          </div>
+<div class="text-xs font-bold uppercase tracking-wider text-sky-700 mb-1">Step 4</div>
+<h3 class="text-base font-bold text-slate-900 font-bangla">রিপোর্ট সংগ্রহ করুন</h3>
+<div class="text-xs text-slate-500 font-semibold mb-3">Automated PDF Invoice &amp; Report</div>
+<p class="text-xs text-slate-600 leading-relaxed font-bangla">
+            ল্যাব টেস্ট সম্পন্ন হওয়ামাত্রই রেজাল্ট রেডি হয়ে যাবে। সরাসরি আপনার মোবাইলে SMS লিংক ও পোর্টালে ডাউনলোড করুন।
+          </p>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center text-[11px] text-sky-700 font-bold">
+<i class="w-3.5 h-3.5 mr-1 text-sky-600" data-lucide="file-check"></i> QR Verified Official PDF
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Report Modal / Section Demo -->
+<section class="py-16 px-4 md:px-8 bg-gradient-to-b from-slate-50 to-sky-50/40 border-t border-slate-200" id="report-portal">
+<div class="max-w-5xl mx-auto bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-6 space-y-4">
+<span class="px-3 py-1 bg-sky-50 text-sky-700 border border-sky-200 text-xs font-bold rounded-full uppercase">
+            Fast Digital Delivery
+          </span>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-bangla">
+            অনলাইন রিপোর্ট ডাউনলোড পোর্টাল
+          </h2>
+<p class="text-slate-600 text-sm font-bangla leading-relaxed">
+            হাসপাতালে দীর্ঘ লাইনে না দাঁড়িয়ে ঘরে বসেই আপনার বা আপনার পরিবারের প্যাথলজি ও রেডিওলজি রিপোর্টের সত্যায়িত ডিজিটাল কপি ডাউনলোড করুন।
+          </p>
+<ul class="space-y-2 text-xs text-slate-700 font-medium">
+<li class="flex items-center space-x-2">
+<i class="w-4 h-4 text-sky-600" data-lucide="check-circle"></i>
+<span>ডিজিটাল সিগনেচার ও কিউআর কোড ভেরিফিকেশন সুবিধা</span>
+</li>
+<li class="flex items-center space-x-2">
+<i class="w-4 h-4 text-sky-600" data-lucide="check-circle"></i>
+<span>জরুরি প্রয়োজনে চিকিৎসকের কাছে সরাসরি PDF শেয়ারযোগ্য</span>
+</li>
+</ul>
+</div>
+<div class="lg:col-span-6 bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+<div class="text-xs font-mono text-sky-700 font-bold uppercase tracking-wider">Patient Report Finder</div>
+<div class="space-y-3">
+<div>
+<label class="block text-xs font-bold text-slate-700 mb-1 font-bangla">ইনভয়েস / বিল নাম্বার (Invoice / Bill ID)</label>
+<input class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2.5 text-xs text-slate-800 font-mono focus:border-sky-500 focus:outline-none" id="report-invoice-id" placeholder="যেমন: CPD-2025-XXXX" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-700 mb-1 font-bangla">রেজিস্টার্ড মোবাইল নাম্বার (Phone Number)</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 text-xs font-mono font-bold text-sky-600 border-r border-slate-300 pr-2">+880</span>
+<input class="w-full bg-white border border-slate-300 rounded-xl pl-16 pr-3 py-2.5 text-xs text-slate-800 font-mono focus:border-sky-500 focus:outline-none" id="report-phone-id" placeholder="17XXXXXXXX" type="tel"/>
+</div>
+</div>
+<button class="w-full py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl transition flex items-center justify-center space-x-1.5 font-bangla shadow-sm" onclick="searchReport()">
+<i class="w-4 h-4" data-lucide="download"></i>
+<span>রিপোর্ট খুঁজুন ও ডাউনলোড করুন</span>
+</button>
+</div>
+<div class="hidden p-3 rounded-xl bg-white border border-sky-300 text-xs shadow-sm" id="report-result-box">
+<div class="flex items-center justify-between text-slate-700">
+<span class="font-bold text-slate-900 font-bangla">রিপোর্ট প্রস্তুত!</span>
+<span class="text-sky-700 font-mono font-bold">PDF Size: 1.4 MB</span>
+</div>
+<div class="text-[11px] text-slate-600 mt-1 font-medium">Verified: Complete Blood Count &amp; Liver Profile</div>
+<button class="mt-2.5 w-full py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs transition flex items-center justify-center gap-1 shadow-xs" onclick="downloadSampleReport('CURRENT')">
+<i class="w-3.5 h-3.5" data-lucide="file-text"></i> Download Official PDF
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Footer -->
+<footer class="bg-slate-900 text-slate-400 pt-16 pb-12 border-t border-slate-800 text-xs sm:text-sm" id="contact">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+<!-- Column 1: CarePoint Branding & Mission -->
+<div class="space-y-4">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-teal-400 p-0.5">
+<div class="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center">
+<i class="w-5 h-5 text-sky-400" data-lucide="activity"></i>
+</div>
+</div>
+<div>
+<div class="text-base font-bold text-white">CarePoint</div>
+<div class="text-[10px] uppercase tracking-wider text-slate-400">Diagnostic &amp; Medical Center</div>
+</div>
+</div>
+<p class="text-xs text-slate-400 font-bangla leading-relaxed">
+            দক্ষিণবঙ্গে আধুনিক ও নির্ভুল রোগ নির্ণয় সেবা প্রদান ও আন্তর্জাতিক মানের স্বাস্থ্যসেবা পৌঁছে দিতে কেয়ারপয়েন্ট প্রতিশ্রুতিবদ্ধ।
+          </p>
+<div class="pt-2 flex items-center space-x-2 text-xs text-slate-300">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-bangla font-semibold text-slate-200">সার্বক্ষণিক ল্যাব ও ইমার্জেন্সি সেবা চালু</span>
+</div>
+</div>
+<!-- Column 2: Quick Links -->
+<div class="space-y-3">
+<h3 class="text-sm font-bold text-white tracking-wider uppercase font-sans">
+            Quick Links | <span class="font-bangla">প্রয়োজনীয় লিংক</span>
+</h3>
+<ul class="space-y-2 text-xs font-bangla">
+<li><a class="hover:text-sky-400 transition-colors flex items-center gap-1.5" href="#services"><i class="w-3 h-3 text-sky-400" data-lucide="chevron-right"></i> ডায়াগনস্টিক সেবাসমূহ (Services)</a></li>
+<li><a class="hover:text-sky-400 transition-colors flex items-center gap-1.5" href="#doctors"><i class="w-3 h-3 text-sky-400" data-lucide="chevron-right"></i> বিশেষজ্ঞ ডাক্তার তালিকা (Doctors)</a></li>
+<li><a class="hover:text-sky-400 transition-colors flex items-center gap-1.5" href="#report-portal"><i class="w-3 h-3 text-sky-400" data-lucide="chevron-right"></i> অনলাইন রিপোর্ট ডাউনলোড (PDF Download)</a></li>
+<li><a class="hover:text-sky-400 transition-colors flex items-center gap-1.5" href="#booking"><i class="w-3 h-3 text-sky-400" data-lucide="chevron-right"></i> সিরিয়াল বুকিং ও হেলথ প্যাকেজ</a></li>
+<li><a class="hover:text-sky-400 transition-colors flex items-center gap-1.5" href="tel:+8801712345678"><i class="w-3 h-3 text-sky-400" data-lucide="chevron-right"></i> অ্যাম্বুলেন্স সাপোর্ট (24/7 Ambulance)</a></li>
+</ul>
+</div>
+<!-- Column 3: Contact & Location Info -->
+<div class="space-y-3">
+<h3 class="text-sm font-bold text-white tracking-wider uppercase font-sans">
+            Contact &amp; Location | <span class="font-bangla">ঠিকানা</span>
+</h3>
+<div class="space-y-2.5 text-xs text-slate-400">
+<div class="flex items-start space-x-2.5">
+<i class="w-4 h-4 text-sky-400 shrink-0 mt-0.5" data-lucide="map-pin"></i>
+<span class="font-bangla">হাসপাতাল রোড, বরিশাল সদর, বরিশাল - ৮২০০ (শের-ই-বাংলা মেডিকেল সংলগ্ন)</span>
+</div>
+<div class="flex items-center space-x-2.5">
+<i class="w-4 h-4 text-red-400 shrink-0" data-lucide="phone-call"></i>
+<span class="font-mono text-slate-200">+880 1712-345678, +880 1812-345678</span>
+</div>
+<div class="flex items-center space-x-2.5">
+<i class="w-4 h-4 text-sky-400 shrink-0" data-lucide="mail"></i>
+<span class="font-mono">support@carepoint-bd.com</span>
+</div>
+<div class="flex items-center space-x-2.5">
+<i class="w-4 h-4 text-emerald-400 shrink-0" data-lucide="clock"></i>
+<span class="font-bangla">ডায়াগনস্টিক ও জরুরি বিভাগ: ২৪ ঘণ্টা খোলা</span>
+</div>
+</div>
+</div>
+<!-- Column 4: Newsletter + Social Media -->
+<div class="space-y-4">
+<h3 class="text-sm font-bold text-white tracking-wider uppercase font-sans">
+            Stay Connected | <span class="font-bangla">যুক্ত থাকুন</span>
+</h3>
+<p class="text-xs text-slate-400 font-bangla">
+            নিয়মিত স্বাস্থ্য টিপস ও ফ্রি হেলথ ক্যাম্পের খবর পেতে ইমেইল সাবস্ক্রাইব করুন।
+          </p>
+<form class="space-y-2" onsubmit="handleNewsletter(event)">
+<div class="flex">
+<input class="w-full bg-slate-800 border border-slate-700 rounded-l-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-sky-400" placeholder="আপনার ইমেইল অ্যাড্রেস..." required="" type="email"/>
+<button class="bg-sky-500 hover:bg-sky-400 text-slate-950 px-3.5 rounded-r-xl font-bold transition" type="submit">
+<i class="w-3.5 h-3.5" data-lucide="send"></i>
+</button>
+</div>
+<div class="hidden text-[11px] text-sky-400 font-bangla" id="newsletter-msg">সাবস্ক্রিপশন সম্পন্ন হয়েছে!</div>
+</form>
+<!-- Social links -->
+<div class="pt-2">
+<div class="text-xs text-slate-400 mb-2">সোশ্যাল মিডিয়া পেজ:</div>
+<div class="flex items-center space-x-3">
+<a class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-sky-500 hover:text-slate-950 text-slate-400 flex items-center justify-center transition border border-slate-700" href="#">
+<i class="w-4 h-4" data-lucide="facebook"></i>
+</a>
+<a class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-sky-500 hover:text-slate-950 text-slate-400 flex items-center justify-center transition border border-slate-700" href="#">
+<i class="w-4 h-4" data-lucide="youtube"></i>
+</a>
+<a class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-sky-500 hover:text-slate-950 text-slate-400 flex items-center justify-center transition border border-slate-700" href="#">
+<i class="w-4 h-4" data-lucide="linkedin"></i>
+</a>
+<a class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-sky-500 hover:text-slate-950 text-slate-400 flex items-center justify-center transition border border-slate-700" href="#">
+<i class="w-4 h-4" data-lucide="instagram"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Copyright Bottom Bar -->
+<div class="pt-8 mt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+<div>
+          © 2025 CarePoint Diagnostic &amp; Medical Center. All rights reserved. Barishal, Bangladesh.
+        </div>
+<div class="flex items-center space-x-4 font-bangla text-slate-400">
+<a class="hover:underline hover:text-white" href="#">প্রাইভেসি পলিসি</a>
+<span>•</span>
+<a class="hover:underline hover:text-white" href="#">শর্তাবলী</a>
+<span>•</span>
+<a class="hover:underline hover:text-white" href="#">রোগীর সুরক্ষা সনদ</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Reusable Download Modal -->
+<div class="hidden fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm flex items-center justify-center p-4" id="report-modal">
+<div class="bg-white border border-slate-200 rounded-2xl max-w-md w-full p-6 shadow-2xl relative space-y-4">
+<button class="absolute top-4 right-4 text-slate-400 hover:text-slate-700" onclick="document.getElementById('report-modal').classList.add('hidden')">
+<i class="w-5 h-5" data-lucide="x"></i>
+</button>
+<div class="flex items-center space-x-2 text-sky-600">
+<i class="w-5 h-5" data-lucide="file-text"></i>
+<h3 class="text-base font-bold text-slate-900 font-bangla">অনলাইন টেস্ট রিপোর্ট ডাউনলোড</h3>
+</div>
+<p class="text-xs text-slate-600 font-bangla font-medium">
+        আপনার মানি রিসিপ্ট বা প্রেসক্রিপশনে উল্লেখিত বিল আইডি দিয়ে ক্লিক করুন।
+      </p>
+<div class="space-y-3">
+<input class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs text-sky-800 font-mono font-bold" type="text" value="CPD-2025-8841"/>
+<button class="w-full py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl transition flex items-center justify-center space-x-1.5 font-bangla shadow-sm" onclick="downloadSampleReport('CPD-2025-8841')">
+<i class="w-4 h-4" data-lucide="download"></i>
+<span>অটোমেটেড ভেরিফাইড PDF ওপেন করুন</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript Logic -->
+<script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Set default date to today
+    const today = new Date().toISOString().split('T')[0];
+    const dateInput = document.getElementById('booking-date');
+    if (dateInput) {
+      dateInput.min = today;
+      dateInput.value = today;
+    }
+
+    // Dynamic Doctors by Department mapping
+    const doctorsData = {
+      cardiology: [
+        { id: 'dr-anwar', name: 'Prof. Dr. Anwarul Kabir (কার্ডিওলজিস্ট)' }
+      ],
+      neurology: [
+        { id: 'dr-mahfuz', name: 'Dr. Mahfuzur Rahman (নিউরো মেডিসিন)' }
+      ],
+      gynecology: [
+        { id: 'dr-farhana', name: 'Dr. Farhana Yasmin (গাইনী ও প্রসূতি)' }
+      ],
+      orthopedics: [
+        { id: 'dr-tanvir', name: 'Dr. K. M. Tanvir Hasan (অর্থোপেডিক)' }
+      ],
+      pediatrics: [
+        { id: 'dr-anwar', name: 'Dr. S. K. Roy (শিশু বিশেষজ্ঞ)' }
+      ],
+      radiology: [
+        { id: 'dr-mahfuz', name: 'Dr. Nazmul Huda (কনসালট্যান্ট রেডিওলজিস্ট)' }
+      ]
+    };
+
+    function updateDoctorsList() {
+      const dept = document.getElementById('department-select').value;
+      const docSelect = document.getElementById('doctor-select');
+      docSelect.innerHTML = '<option value="">-- ডাক্তার নির্বাচন করুন --</option>';
+
+      if (dept && doctorsData[dept]) {
+        doctorsData[dept].forEach(doc => {
+          const opt = document.createElement('option');
+          opt.value = doc.id;
+          opt.textContent = doc.name;
+          docSelect.appendChild(opt);
+        });
+      } else {
+        // Default all
+        docSelect.innerHTML = `
+          <option value="dr-anwar">Prof. Dr. Anwarul Kabir (কার্ডিওলজিস্ট)</option>
+          <option value="dr-farhana">Dr. Farhana Yasmin (গাইনী ও প্রসূতি)</option>
+          <option value="dr-mahfuz">Dr. Mahfuzur Rahman (নিউরো মেডিসিন)</option>
+          <option value="dr-tanvir">Dr. K. M. Tanvir Hasan (অর্থোপেডিক)</option>
+        `;
+      }
+    }
+
+    // Quick select doctor from cards
+    function selectDoctorQuick(docId, docName) {
+      const docSelect = document.getElementById('doctor-select');
+      if (docSelect) {
+        docSelect.value = docId;
+      }
+      const bookingSection = document.getElementById('booking');
+      if (bookingSection) {
+        bookingSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Booking submission
+    function handleBooking(e) {
+      e.preventDefault();
+      const phone = document.getElementById('patient-phone').value;
+      const successBox = document.getElementById('booking-success');
+      const token = document.getElementById('booking-token');
+      
+      const randNum = Math.floor(1000 + Math.random() * 9000);
+      token.textContent = 'CPD-BK-' + randNum;
+      successBox.classList.remove('hidden');
+      successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Search Report
+    function searchReport() {
+      const box = document.getElementById('report-result-box');
+      box.classList.remove('hidden');
+    }
+
+    // Sample automated report simulation
+    function downloadSampleReport(reportId) {
+      alert("CarePoint Automated LIS:\n\nGenerating authenticated PDF Lab Report for ID: " + reportId + "\n\n✓ Barcode Authenticated\n✓ ISO 15189 Verified\n✓ Digital Signature Included");
+      if (document.getElementById('report-modal')) {
+        document.getElementById('report-modal').classList.add('hidden');
+      }
+    }
+
+    // Newsletter simulation
+    function handleNewsletter(e) {
+      e.preventDefault();
+      document.getElementById('newsletter-msg').classList.remove('hidden');
+    }
+  </script>
+</body></html>
